@@ -3,7 +3,7 @@
 * Proprietary and confidential
 * 
 * Written by: Bruno G. <brunogranato@poli.ufrj.br>
-*             Nicholas Q. <nicholasquagliani@poli.ufrj.br>
+*             Nicholas Q. <nquagliani@poli.ufrj.br>
 *             Renata P. <r.baptista@poli.ufrj.br>
 *             Vinicius M. <viniciusmesquita@poli.ufrj.br>
 * 
@@ -15,5 +15,5 @@
 * Federal University of Rio de Janeiro (UFRJ)
 *
 * Course: PI 
-* Professor: Casé & Joarez
+* Professor: CasÃ© & Joarez
 */
