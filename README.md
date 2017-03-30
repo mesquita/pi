@@ -5,3 +5,4 @@ Grupo de Projeto Integrado de 2017/1 do curso de Engenharia Eletrônica e de Com
 
 Integrantes: Bruno G.; Nicholas Q.; Renata P.; Vinicius M..
 
+Biblioteca usada para o LCD: LiquidCrystal_l2C-DFrobot
