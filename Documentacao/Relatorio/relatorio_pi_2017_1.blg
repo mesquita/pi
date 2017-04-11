@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: relatorio_pi_2017_1.aux
 I couldn't open style file coppe.bst
----line 19 of file relatorio_pi_2017_1.aux
+---line 33 of file relatorio_pi_2017_1.aux
  : \bibstyle{coppe
  :                }
 I'm skipping whatever remains of this command
 I couldn't open database file My_Collection_used.bib
----line 20 of file relatorio_pi_2017_1.aux
+---line 34 of file relatorio_pi_2017_1.aux
  : \bibdata{My_Collection_used
  :                            }
 I'm skipping whatever remains of this command

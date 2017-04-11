@@ -5,13 +5,14 @@
 \contentsline {section}{\numberline {1.3}Organiza\IeC {\c c}\IeC {\~a}o do Documento}{2}
 \contentsline {chapter}{\numberline {2}Tecnologias Utilizadas}{3}
 \contentsline {section}{\numberline {2.1}Especifica\IeC {\c c}\IeC {\~o}es}{3}
-\contentsline {section}{\numberline {2.2}Projeto de Hardware}{3}
-\contentsline {subsection}{\numberline {2.2.1}Sensor de temperatura - LM35}{3}
-\contentsline {subsection}{\numberline {2.2.2}Sensor de umidade do Solo Higr\IeC {\^o}metro}{3}
-\contentsline {subsection}{\numberline {2.2.3}Sensor de luminosidade LDR 5mm }{4}
-\contentsline {subsection}{\numberline {2.2.4}Plataforma arduino - Mega}{4}
-\contentsline {subsection}{\numberline {2.2.5}Mec\IeC {\^a}nica}{4}
-\contentsline {section}{\numberline {2.3}Projeto de software}{4}
-\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o}{5}
-\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{6}
-\contentsline {chapter}{Bibliografia}{6}
+\contentsline {subsection}{\numberline {2.1.1}Plantas}{3}
+\contentsline {section}{\numberline {2.2}Projeto de Hardware}{4}
+\contentsline {subsection}{\numberline {2.2.1}Sensor de temperatura - LM35}{4}
+\contentsline {subsection}{\numberline {2.2.2}Sensor de umidade do Solo Higr\IeC {\^o}metro}{5}
+\contentsline {subsection}{\numberline {2.2.3}Sensor de luminosidade LDR 5mm }{5}
+\contentsline {subsection}{\numberline {2.2.4}Plataforma arduino - Mega}{5}
+\contentsline {subsection}{\numberline {2.2.5}Mec\IeC {\^a}nica}{5}
+\contentsline {section}{\numberline {2.3}Projeto de software}{6}
+\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o}{7}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{8}
+\contentsline {chapter}{Bibliografia}{8}
