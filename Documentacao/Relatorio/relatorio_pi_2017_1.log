@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.14)  11 APR 2017 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.14)  11 APR 2017 14:04
 entering extended mode
 **./relatorio_pi_2017_1.tex
 (relatorio_pi_2017_1.tex
@@ -488,7 +488,7 @@ Cap\'{\i }tulo 2.
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 59.
 
-<figs/renda.jpg, id=17, 230.8625pt x 230.8625pt>
+<figs/renda.jpg, id=18, 230.8625pt x 230.8625pt>
 File: figs/renda.jpg Graphic file (type jpg)
  <use figs/renda.jpg>
 Package pdftex.def Info: figs/renda.jpg used on input line 63.
@@ -497,7 +497,7 @@ Package pdftex.def Info: figs/renda.jpg used on input line 63.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/avenca.jpg, id=18, 224.33812pt x 244.66406pt>
+<figs/avenca.jpg, id=19, 224.33812pt x 244.66406pt>
 File: figs/avenca.jpg Graphic file (type jpg)
  <use figs/avenca.jpg>
 Package pdftex.def Info: figs/avenca.jpg used on input line 73.
@@ -508,7 +508,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3
 
-] <./figs/LM35_config_basica.png, id=24, 213.79875pt x 142.28156pt>
+]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 84.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 84.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 84.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 84.
+
+<./figs/LM35_config_basica.png, id=24, 213.79875pt x 142.28156pt>
 File: ./figs/LM35_config_basica.png Graphic file (type png)
 
 <use ./figs/LM35_config_basica.png>
@@ -534,13 +547,14 @@ Here is how much of TeX's memory you used:
  55i,7n,54p,891b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmti12.pfb>
-Output written on relatorio_pi_2017_1.pdf (9 pages, 155391 bytes).
+c/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on relatorio_pi_2017_1.pdf (9 pages, 163802 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -43,7 +43,7 @@
 	\section{Objetivo}
 		Este projeto tem por objetivo a construção de um sistema que regue e controle a quantidade de luz solar recebida por plantas, uma vez sabido a espécie da mesma.
 		
-		A ideia é interagir com o usuário por meio de um display LCD e botões do mesmo módulo, para que ele possa determinar qual é a espécie da planta, entre as pré-determinadas. 
+		A ideia é interagir com o usuário por meio de um \textit{display} LCD e botões do mesmo módulo, para que ele possa determinar qual é a espécie da planta, entre as pré-determinadas. 
 		
 		Além disso, haverá o sensoriamento do ambiente. Colhendo informações de temperatura, umidade e luminosidade.
 		
@@ -79,9 +79,9 @@
 	
 		\subsection{Sensor de temperatura - LM35}
 		
-		Sensor de precisão de temperatura centígrado, apresenta uma saída em tensão linearmente proporcional a graus celsius. Além disso, não necessita de nenhuma calibração externa.
+		Sensor de precisão de temperatura centígrado, apresenta uma saída em tensão linearmente proporcional a graus Celsius. Além disso, não necessita de nenhuma calibração externa.
 		
-		Dentre suas especificações, ressaltamos, a sua acurária de 0.5 grau (a +25 graus celsius), suficiente para aplicação. Além disso, sensor é capaz de medir temperaturas de -50 graus a 150 graus, o que cobre a faixa dinâmica de trabalho no projeto. Apesar disso, usaremos o sensor na configuração básica conforme a Figura 2.1 Consideramos também a faixa de tensão de trabalho que é de 4V a 30V, o que permite a alimentação com a placa escolhida e drena menos de 60 micro A, também dentro da capacidade da placa.
+		Dentre suas especificações, ressaltamos, a sua acurácia de 0.5$\textdegree$ (a +25$\textdegree$ Celsius), suficiente para aplicação. Além disso, sensor é capaz de medir temperaturas de -50$\textdegree$ a 150$\textdegree$ Celsius, o que cobre a faixa dinâmica de trabalho no projeto. Apesar disso, usaremos o sensor na configuração básica conforme a Figura 2.1 Consideramos também a faixa de tensão de trabalho que é de 4~V a 30~V, o que permite a alimentação com a placa escolhida e drena menos de 60~$\mu$A, também dentro da capacidade da placa.
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics{LM35_config_basica}
@@ -90,24 +90,24 @@
 		\end{figure}
 		\subsection{Sensor de umidade do Solo Higrômetro}
 		Sensor é capaz de perceber variações da umidade do solo, tem saída em volts que é linearmente depende da umidade.
-		Trabalha com tensão de Operação: 3,3-5v, o que torna viável sua utilização com o Arduino. Tem saída digital em Led, com a sensibilidade calibrada por potenciômetro. Mas essa função não será utilizada no projeto.
+		Trabalha com tensão de Operação: 3, 3 - 5 V, o que torna viável sua utilização com o Arduino. Tem saída digital em LED, com a sensibilidade calibrada por potenciômetro. Mas essa função não será utilizada no projeto.
 	
 		\subsection{Sensor de luminosidade LDR 5mm}
 		
-		Sensor de Luminosidade LDR de 5mm de diâmetro. Este sensor altera a resistência em seus terminais conforme a luminosidade a que é submetido.
+		Sensor de Luminosidade LDR de 5~mm de diâmetro. Este altera a resistência em seus terminais conforme a luminosidade que é submetido.
 		
 		Especificações:
-		Resistência quando há luz : ~1k Ohm.
+		Resistência quando há luz :~1~k$\Omega$.
 		
-		Resistência no escuro : ~10kOhm.
+		Resistência no escuro :~10~k$\Omega$.
 		
-		Tensão máxima: 150V.
+		Tensão máxima:~150~V.
 		
-		Potência máxima: 100mW.
+		Potência máxima:~100~mW.
 		
-		\subsection{Plataforma arduino - Mega}	
+		\subsection{Plataforma Arduino - Mega}	
 		\subsection{Mecânica}
-			Falar da bomba, da válvula solenóide, do controle das persianas.	
+			Falar da bomba, válvula solenoide, do controle das persianas.	
 	
 		
 	\section{Projeto de software}
