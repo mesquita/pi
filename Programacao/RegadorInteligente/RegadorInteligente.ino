@@ -1,6 +1,5 @@
+// FUnnciona git hub por favorzinho
 #include <LiquidCrystal_I2C.h>
-
-//#include <LiquidCrystal.h>
 
 #include <Wire.h>
 
@@ -18,12 +17,14 @@ LiquidCrystal_I2C lcd(0x27,16,2);
 
 float Tagora = 0, Tsoma = 0 , T = 0, k = 0.92;
 int TPin = 1; // temp sensor pin
+int LDRPin = 2;
 float TCelsius;
+float Luminosidade = 0;
 long antes = 0;
 int segundos = 0;
 int n =0;
 float Cadj = 1;
-int entrada = 0, Setpoint = 25  ;
+int entrada = 0, Setpoint = 27, LumSetpoint = 300;
 int led = 0;
 
 
@@ -37,13 +38,15 @@ void setup()
   
   pinMode(13, OUTPUT); 
   pinMode(12, OUTPUT);    // Watering relay and arduino led
+  pinMode(11, OUTPUT);    // Led LDR indicator
 
   // set up the LCD's number of columns and rows: 
   lcd.init(); //  lcd.begin(16, 2);
   lcd.backlight();
   // Print a message to the LCD.
   lcd.setCursor(0, 0);
-  lcd.print("  T  RH  Ev  W");
+  lcd.print("  T  RH  Lum  W");
+  // lcd.print("Renata eh foda");
     
 }
 
@@ -56,10 +59,24 @@ void loop()
   unsigned long agora = millis();
 
   //T average calculation
-  Tagora = analogRead(TPin);        //read the value from the sensor
+  Tagora = analogRead(TPin);
+  delay(10);
+  Tagora = analogRead(TPin);
+  delay(10);
+  
+  //read the value from the sensor
   Tagora = k * Tagora; // adjust for specific sensor. T boil must be 100 C
   n = n+1; Tsoma = Tsoma + Tagora;  T = Tsoma / n;
+  Luminosidade =0;
   // a cada segundo
+  for(int i = 0; i < 10; i++) { // Average 10 readings for accurate reading     
+    delay(100);
+    Luminosidade += analogRead(LDRPin);
+    delay(100);
+  }  
+  
+  Luminosidade = Luminosidade /10;
+   
   if(agora - antes > 1000) {            
     antes = agora;
     segundos = segundos + 1;
@@ -70,15 +87,20 @@ void loop()
     TCelsius = Cadj * ( 5 * T  * 100 ) / 1024;  // Voltage to Celsius 
     // Constante de ajuste , 5V =  V limite da entrada do Arduino,
     // 1024 niveis (Quantizacao da entrada do Arduino), 100 = 1/0.01 = 10mV/ºC (LM35)
+  
+    //TCelsius = 100;  
     lcd.setCursor(1, 1); lcd.print((int) TCelsius); // T em Celsius
     lcd.setCursor(5, 1); lcd.print((int) TCelsius); // RH em %
-    lcd.setCursor(9, 1); lcd.print((int) TCelsius); // Ev em lx
+    lcd.setCursor(9, 1); lcd.print((int) Luminosidade); // Ev em lx
     // Reset averaging cycle 
-    Tagora = 0; Tsoma = 0; T = 0; n = 0;
+   Tagora = 0; Tsoma = 0; T = 0; n = 0; 
     }
+    /******************************CONTROLE DE ATUADORES ***************************************/
   //Liga ou desliga resistência com histerese de +0 e -1 do SetPoint
   if (TCelsius < (Setpoint - 1)) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
   if (TCelsius > (Setpoint + 0)) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("On "); };
+  if (Luminosidade < (LumSetpoint )) { digitalWrite(11, LOW);  };
+  if (Luminosidade > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };
 
 }
 
