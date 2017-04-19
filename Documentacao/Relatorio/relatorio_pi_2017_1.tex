@@ -107,8 +107,16 @@
 		
 		\subsection{Plataforma Arduino - Mega}	
 		\subsection{Mecânica}
-			Falar da bomba, válvula solenoide, do controle das persianas.	
-	
+			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
+			
+			\begin{figure}[!htb]
+				\centering
+				\includegraphics{valvula}
+				\caption{Válvula solenoide}
+				\label{Rotulo}
+			\end{figure}
+		
+			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. FALTA FALAR SOBRE QUAL SERVO VAMOS USAR""
 		
 	\section{Projeto de software}
 		
