@@ -18,8 +18,12 @@ LiquidCrystal_I2C lcd(0x27,16,2);
 float Tagora = 0, Tsoma = 0 , T = 0, k = 0.92;
 int TPin = 1; // temp sensor pin
 int LDRPin = 2;
+int HRPin = 3;
+
 float TCelsius;
 float Luminosidade = 0;
+float Umidade = 0;
+
 long antes = 0;
 int segundos = 0;
 int n =0;
@@ -74,9 +78,18 @@ void loop()
     Luminosidade += analogRead(LDRPin);
     delay(100);
   }  
-  
   Luminosidade = Luminosidade /10;
-   
+  
+
+  // Leitura do sensor de umidade
+  Umidade = 0;
+  for(int i = 0; i < 10; i++) { // Average 10 readings for accurate reading     
+    delay(100);
+    Umidade += analogRead(HRPin);
+    delay(100);
+  }  
+  Umidade = Umidade /10;
+  Umidade = (Umidade/1024)*100;
   if(agora - antes > 1000) {            
     antes = agora;
     segundos = segundos + 1;
@@ -90,7 +103,7 @@ void loop()
   
     //TCelsius = 100;  
     lcd.setCursor(1, 1); lcd.print((int) TCelsius); // T em Celsius
-    lcd.setCursor(5, 1); lcd.print((int) TCelsius); // RH em %
+    lcd.setCursor(5, 1); lcd.print((int) Umidade); // RH em %
     lcd.setCursor(9, 1); lcd.print((int) Luminosidade); // Ev em lx
     // Reset averaging cycle 
    Tagora = 0; Tsoma = 0; T = 0; n = 0; 
