@@ -5,6 +5,8 @@
 
 #include <SoftwareSerial.h>
 
+#include <Servo.h>
+
 /* This sample code demonstrates the normal use of a TinyGPS object.
    It requires the use of SoftwareSerial, and assumes that you have a
    4800-baud serial GPS device hooked up on pins 4(rx) and 3(tx).
@@ -31,6 +33,22 @@ float Cadj = 1;
 int entrada = 0, Setpoint = 27, LumSetpoint = 300;
 int led = 0;
 
+//Variaveis do controle da persiana
+
+Servo myservo;  // create servo object to control a servo 
+                // a maximum of eight servo objects can be created 
+int pos = 0;    // variable to store the servo position 
+int dest = 0;   // Servo destination depending on photocell reading
+int spd = 50;   // how fast should the servo move? 50 is quier
+
+int servoPin=0; //havent used this yet
+int photocellPin = 2; // the cell and 10K pulldown are connected to a0
+int photocellReading; // the analog reading from the analog resistor divider
+
+int state = 0; //Keep track of state so we don't send signal to the servo without readon, better on battery life
+int prevstate = 0;
+
+int debug = 0; //Set this to 1 for serial debug output
 
 void setup()
 {
@@ -115,6 +133,80 @@ void loop()
   if (Luminosidade < (LumSetpoint )) { digitalWrite(11, LOW);  };
   if (Luminosidade > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };
 
+
+  //Controle da persiana
+    photocellReading = analogRead(photocellPin); //Query photo cell
+      debug and Serial.print("Light Reading :");
+      debug and Serial.print(photocellReading); // the raw analog reading
+      debug and Serial.print(" | Position: ");
+      debug and Serial.print(pos);    
+      debug and Serial.print(" | State: ");
+
+    //Define the modes based on how bright it is, and set corresponding servo position
+    if (photocellReading < 400) {
+        debug and Serial.println("Night");
+      dest=180;      
+      state=1;
+    } 
+    else if (photocellReading < 600) {
+        debug and Serial.println("Dusk");
+      dest=135;      
+      state=2;           
+    } 
+    else if (photocellReading < 950) {
+        debug and Serial.println("Day");
+      dest=85;
+      state=3;
+      
+    } 
+    else if (photocellReading < 1023) {
+        debug and Serial.println("Very Bright Day");
+      dest=20;
+      state=4;
+    } 
+    else {
+        debug and Serial.println("No reading");      
+    }
+    
+
+
+    if (state != prevstate){ //IF the photocell reading is different from last sample then execute servo controls
+          debug and Serial.println("State Change");      
+        myservo.attach(8);                     //Connect to servo
+        if (pos > dest){  // If the current position is great than the destination then we must subtract
+              //for(pos = pos; pos>=dest; pos-=1)     // Change current position to desired position, one degree at a time.
+              while (pos > dest)
+              {                                
+                  debug and Serial.print("Was :");
+                  debug and Serial.print(pos);
+                myservo.write(pos);              // tell servo to go to position in variable 'pos' 
+                delay(spd);                 // waits 15ms for the servo to reach the position 
+                pos--;
+                  debug and Serial.print(" | Is :");
+                  debug and Serial.println(pos);
+              } 
+            myservo.detach();                //Detach from Servo
+        } 
+        else {  // If the current position is great than the destination then we must add
+            myservo.attach(8);
+              //for(pos = pos; pos <= dest; pos+=1)     // goes from 180 degrees to 0 degrees 
+              while (pos < dest)
+              {                        
+                  debug and Serial.print("Was :");
+                  debug and Serial.print(pos);        
+                myservo.write(pos);              // tell servo to go to position in variable 'pos' 
+                delay(spd);                     // waits 15ms for the servo to reach the position 
+                pos++;
+                  debug and Serial.print(" | Is :");
+                  debug and Serial.println(pos);
+              } 
+        }
+        myservo.write(pos); // Doing a write out side of the loop because I had a feeling the last position value was being skipped. I think I'm wrong though
+        delay(spd); 
+        myservo.detach();
+    }
+    prevstate = state; //Remember state so we can compare it again next round
+    delay(50); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
 }
 
 
