@@ -39,7 +39,7 @@ Servo myservo;  // create servo object to control a servo
                 // a maximum of eight servo objects can be created 
 int pos = 0;    // variable to store the servo position 
 int dest = 0;   // Servo destination depending on photocell reading
-int spd = 50;   // how fast should the servo move? 50 is quier
+int spd = 25;   // how fast should the servo move? 50 is quier
 
 int servoPin=0; //havent used this yet
 int photocellPin = 2; // the cell and 10K pulldown are connected to a0
@@ -143,24 +143,24 @@ void loop()
       debug and Serial.print(" | State: ");
 
     //Define the modes based on how bright it is, and set corresponding servo position
-    if (photocellReading < 400) {
-        debug and Serial.println("Night");
+    if (photocellReading < 125) {
+        debug and Serial.println("Very Bright Day");
       dest=180;      
       state=1;
     } 
-    else if (photocellReading < 600) {
-        debug and Serial.println("Dusk");
+    else if (photocellReading < 250) {
+        debug and Serial.println("Day");
       dest=135;      
       state=2;           
     } 
-    else if (photocellReading < 950) {
-        debug and Serial.println("Day");
+    else if (photocellReading < 375) {
+        debug and Serial.println("Dusk");
       dest=85;
       state=3;
       
     } 
     else if (photocellReading < 1023) {
-        debug and Serial.println("Very Bright Day");
+        debug and Serial.println("Night");
       dest=20;
       state=4;
     } 
@@ -206,7 +206,7 @@ void loop()
         myservo.detach();
     }
     prevstate = state; //Remember state so we can compare it again next round
-    delay(50); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
+    delay(10); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
 }
 
 
