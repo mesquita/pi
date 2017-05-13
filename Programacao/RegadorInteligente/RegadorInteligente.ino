@@ -30,7 +30,7 @@ long antes = 0;
 int segundos = 0;
 int n =0;
 float Cadj = 1;
-int entrada = 0, Setpoint = 27, LumSetpoint = 300;
+int entrada = 0, Setpoint = 27, LumSetpoint = 300, HumiditySetpoint = 70;
 int led = 0;
 
 //Variaveis do controle da persiana
@@ -128,8 +128,8 @@ void loop()
     }
     /******************************CONTROLE DE ATUADORES ***************************************/
   //Liga ou desliga resistência com histerese de +0 e -1 do SetPoint
-  if (TCelsius < (Setpoint - 1)) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
-  if (TCelsius > (Setpoint + 0)) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("On "); };
+  if (TCelsius < (Setpoint - 1) || Umidade > HumiditySetpoint) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
+  if (TCelsius > (Setpoint + 0) || Umidade < HumiditySetpoint) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("On "); };
   if (Luminosidade < (LumSetpoint )) { digitalWrite(11, LOW);  };
   if (Luminosidade > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };
 
