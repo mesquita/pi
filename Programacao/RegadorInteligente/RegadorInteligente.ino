@@ -128,8 +128,8 @@ void loop()
     }
     /******************************CONTROLE DE ATUADORES ***************************************/
   //Liga ou desliga resistência com histerese de +0 e -1 do SetPoint
-  if (TCelsius < (Setpoint - 1) || Umidade > HumiditySetpoint) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
-  if (TCelsius > (Setpoint + 0) || Umidade < HumiditySetpoint) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("On "); };
+  if (TCelsius < (Setpoint - 1) || Umidade < HumiditySetpoint) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
+  if (TCelsius > (Setpoint + 0) || Umidade > HumiditySetpoint) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("On "); };
   if (Luminosidade < (LumSetpoint )) { digitalWrite(11, LOW);  };
   if (Luminosidade > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };
 
