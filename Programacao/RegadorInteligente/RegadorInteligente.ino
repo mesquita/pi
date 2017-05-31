@@ -20,8 +20,8 @@
 // initialize the LCD library with the numbers of the interface pins
 LiquidCrystal_I2C lcd(0x27,16,2);
 
-int Setpoint = 27, LumSetpoint = 300, HumiditySetpointAvenca = 70, HumiditySetpointRenda = 60;
-int HumiditySetpoint1, HumiditySetpoint2;
+int Setpoint = 27, LumSetpoint = 300, HumiditySetpointAvenca = 70, HumiditySetpointRenda = 60, LumSetpointAvenca = 80, LumSetpointRenda = 100, passoLum = 40;
+int HumiditySetpoint1, HumiditySetpoint2, LumSetpoint1, LumSetpoint2;
 
 // temperatura, umidade e luminosidade (1)
 
@@ -67,7 +67,7 @@ int led2 = 0;
 Servo myservo1;  // create servo object to control a servo 
                 // a maximum of eight servo objects can be created 
 int pos1 = 0;    // variable to store the servo pos1ition 
-int dest1 = 0;   // Servo dest1ination depending on photocell reading
+int dest1 = 10;   // Servo dest1ination depending on photocell reading
 int spd1 = 25;   // how fast should the servo move? 50 is quier
 
 int servoPin1=0; //havent used this yet
@@ -77,24 +77,24 @@ int photocellReading1; // the analog reading from the analog resistor divider
 int state1 = 0; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
 int prevstate1 = 0;
 
-int debug1 = 1; //Set this to 1 for serial debug output
+int debug1 = 0; //Set this to 1 for serial debug output
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 Servo myservo2;  // create servo object to control a servo 
                 // a maximum of eight servo objects can be created 
 int pos2 = 0;    // variable to store the servo pos1ition 
-int dest2 = 0;   // Servo dest1ination depending on photocell reading
+int dest2 = 10;   // Servo dest1ination depending on photocell reading
 int spd2 = 25;   // how fast should the servo move? 50 is quier
 
 int servoPin2=0; //havent used this yet
-int photocellPin2 = 9; // the cell and 10K pulldown are connected to a8
+int photocellPin2 = 9; // the cell and 10K pulldown are connected to a9
 int photocellReading2; // the analog reading from the analog resistor divider
 
 int state2 = 0; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
 int prevstate2 = 0;
 
-int debug2 = 0; //Set this to 1 for serial debug output
+int debug2 = 1; //Set this to 1 for serial debug output
 
 void setup()
 {
@@ -125,16 +125,34 @@ void loop()
     int plantaVerdeEscuro = digitalRead(51); //VERDE ESCURO
 //HIGH -> AVENCA
 //LOW  -> RENDA
-    if (plantaVerdeClaro == HIGH)
+    if (plantaVerdeClaro == HIGH){
       HumiditySetpoint1 = HumiditySetpointAvenca;
-     else
+      LumSetpoint1 = LumSetpointAvenca;
+    }
+     else{
       HumiditySetpoint1 = HumiditySetpointRenda;
+      LumSetpoint1 = LumSetpointRenda;
+     }
 
-     if (plantaVerdeEscuro == HIGH)
+     if (plantaVerdeEscuro == HIGH){
       HumiditySetpoint2 = HumiditySetpointAvenca;
-     else
+      LumSetpoint2 = LumSetpointAvenca;
+     }
+     else{
       HumiditySetpoint2 = HumiditySetpointRenda;
-  Serial.println();
+      LumSetpoint2 = LumSetpointRenda;
+     }
+
+  
+/*  Serial.println("///////////////");
+  Serial.println("50:");
+  Serial.println(digitalRead(50));
+  Serial.println("51:");
+  Serial.println(digitalRead(51));*/
+  
+  
+  
+  
   int i;
 //controle Temperatura, umidade e luminosidade (1)
 
@@ -187,7 +205,7 @@ void loop()
    Tagora1 = 0; Tsoma1 = 0; T1 = 0; n1 = 0; 
     }
     /******************************CONTROLE DE ATUADORES ***************************************/
-  //Liga ou desliga resistência com histerese de +0 e -1 do SetPoint
+  //Liga ou desliga resistência com histerese de +0 e -1 do Setpoint
 //  if (TCelsius1 < (Setpoint - 1) || Umidade1 < HumiditySetpoint) { digitalWrite(12, LOW); lcd.setCursor(13, 1); lcd.print("Off "); };
    if ( Umidade1 < HumiditySetpoint1) { digitalWrite(12, HIGH); lcd.setCursor(13, 1); lcd.print("Off "); };
 
@@ -248,7 +266,7 @@ void loop()
    Tagora2 = 0; Tsoma2 = 0; T2 = 0; n2 = 0; 
     }
     /******************************CONTROLE DE ATUADORES ***************************************/
-  //Liga ou desliga resistência com histerese de +0 e -1 do SetPoint
+  //Liga ou desliga resistência com histerese de +0 e -1 do Setpoint
 /*  if (Umidade2 < HumiditySetpoint2) { digitalWrite(10, HIGH); lcd.setCursor(13, 1); lcd.print("Off "); };
   if (Umidade2 > HumiditySetpoint2) { digitalWrite(10, LOW); lcd.setCursor(13, 1); lcd.print("On "); };
   if (Luminosidade2 < (LumSetpoint )) { digitalWrite(11, LOW);  };
@@ -264,17 +282,17 @@ void loop()
       debug1 and Serial.print(" | state1: ");
 
     //Define the modes based on how bright it is, and set corresponding servo pos1ition
-    if (photocellReading1 < 80) {
+    if (photocellReading1 < LumSetpoint1) {
         debug1 and Serial.println("Very Bright Day");
       dest1=180;      
       state1=1;
     } 
-    else if (photocellReading1 < 120) {
+    else if (photocellReading1 < LumSetpoint1 + passoLum) {
         debug1 and Serial.println("Day");
       dest1=135;      
       state1=2;           
     } 
-    else if (photocellReading1 < 160) {
+    else if (photocellReading1 < LumSetpoint1 + 2*passoLum) {
         debug1 and Serial.println("Dusk");
       dest1=85;
       state1=3;
@@ -282,7 +300,7 @@ void loop()
     } 
     else if (photocellReading1 < 1023) {
         debug1 and Serial.println("Night");
-      dest1=20;
+      dest1=0;
       state1=4;
     } 
     else {
@@ -340,17 +358,17 @@ void loop()
       debug2 and Serial.print(" | state2: ");
 
     //Define the modes based on how bright it is, and set corresponding servo pos1ition
-    if (photocellReading2 < 125) {
+    if (photocellReading2 < LumSetpoint2) {
         debug2 and Serial.println("Very Bright Day");
       dest2=180;      
       state2=1;
     } 
-    else if (photocellReading2 < 250) {
+    else if (photocellReading2 < LumSetpoint2 + passoLum) {
         debug2 and Serial.println("Day");
       dest2=135;      
       state2=2;           
     } 
-    else if (photocellReading2 < 375) {
+    else if (photocellReading2 < LumSetpoint2 + 2*passoLum) {
         debug2 and Serial.println("Dusk");
       dest2=85;
       state2=3;
@@ -358,7 +376,7 @@ void loop()
     } 
     else if (photocellReading2 < 1023) {
         debug2 and Serial.println("Night");
-      dest2=20;
+      dest2=0;
       state2=4;
     } 
     else {
@@ -391,7 +409,7 @@ void loop()
               {                        
                   debug2 and Serial.print("Was :");
                   debug2 and Serial.print(pos2);        
-                myservo1.write(pos2);              // tell servo to go to pos1ition in variable 'pos1' 
+                myservo2.write(pos2);              // tell servo to go to pos1ition in variable 'pos1' 
                 delay(spd2);                     // waits 15ms for the servo to reach the pos1ition 
                 pos2++;
                   debug2 and Serial.print(" | Is :");
