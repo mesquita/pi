@@ -106,6 +106,7 @@ void setup()
   
   pinMode(13, OUTPUT); 
   pinMode(12, OUTPUT);    // Watering relay and arduino led1 (1)
+  pinMode(9, OUTPUT);    // Watering relay and arduino led2 (2)
   pinMode(11, OUTPUT);    // led1 LDR indicator (1)
 
   // set up the LCD's number of columns and rows: 
@@ -120,39 +121,34 @@ void setup()
 
 void loop()
 {
+//debug
+    int plantaVerdeClaro =  HIGH; //VERDE CLARO 
+    int plantaVerdeEscuro = LOW; //VERDE ESCURO
 
-    int plantaVerdeClaro =  digitalRead(50); //VERDE CLARO
-    int plantaVerdeEscuro = digitalRead(51); //VERDE ESCURO
+/*    int plantaVerdeClaro =  digitalRead(43); //VERDE CLARO
+    int plantaVerdeEscuro = digitalRead(48); //VERDE ESCURO
+    */
 //HIGH -> AVENCA
 //LOW  -> RENDA
     if (plantaVerdeClaro == HIGH){
       HumiditySetpoint1 = HumiditySetpointAvenca;
       LumSetpoint1 = LumSetpointAvenca;
     }
-     else{
+    else{
       HumiditySetpoint1 = HumiditySetpointRenda;
       LumSetpoint1 = LumSetpointRenda;
-     }
+    }
 
-     if (plantaVerdeEscuro == HIGH){
+    if (plantaVerdeEscuro == HIGH){
       HumiditySetpoint2 = HumiditySetpointAvenca;
       LumSetpoint2 = LumSetpointAvenca;
-     }
-     else{
+    }
+    else{
       HumiditySetpoint2 = HumiditySetpointRenda;
       LumSetpoint2 = LumSetpointRenda;
-     }
+    } 
 
-  
-/*  Serial.println("///////////////");
-  Serial.println("50:");
-  Serial.println(digitalRead(50));
-  Serial.println("51:");
-  Serial.println(digitalRead(51));*/
-  
-  
-  
-  
+
   int i;
 //controle Temperatura, umidade e luminosidade (1)
 
@@ -190,8 +186,8 @@ void loop()
     antes1 = agora1;
     segundos1 = segundos1 + 1;
     //Heartbeat
-    if ( led1== 0 ) {led1=1; digitalWrite(13, HIGH); }
-      else {led1=0; digitalWrite(13, LOW); };
+  /*  if ( led1== 0 ) {led1=1; digitalWrite(13, HIGH); }
+      else {led1=0; digitalWrite(13, LOW); };*/
     //lcd.setCursor(11, 0); lcd.print((int) segundos);  
     TCelsius1 = Cadj1 * ( 5 * T1  * 100 ) / 1024;  // Voltage to Celsius 
     // Constante de ajuste , 5V =  V limite da entrada do Arduino,
@@ -214,6 +210,11 @@ void loop()
  // digitalWrite(12, HIGH);
   if (Luminosidade1 < (LumSetpoint )) { digitalWrite(11, LOW);  };
   if (Luminosidade1 > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };
+
+Serial.println("u1");
+Serial.println(Umidade1);
+Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+
 
 //controle Temperatura, umidade e luminosidade (2)
 
@@ -267,12 +268,14 @@ void loop()
     }
     /******************************CONTROLE DE ATUADORES ***************************************/
   //Liga ou desliga resistência com histerese de +0 e -1 do Setpoint
-/*  if (Umidade2 < HumiditySetpoint2) { digitalWrite(10, HIGH); lcd.setCursor(13, 1); lcd.print("Off "); };
-  if (Umidade2 > HumiditySetpoint2) { digitalWrite(10, LOW); lcd.setCursor(13, 1); lcd.print("On "); };
-  if (Luminosidade2 < (LumSetpoint )) { digitalWrite(11, LOW);  };
+  if (Umidade2 < HumiditySetpoint2) {digitalWrite(9, HIGH); lcd.setCursor(13, 1); lcd.print("Off "); };
+  if (Umidade2 > HumiditySetpoint2) {digitalWrite(9, LOW); lcd.setCursor(13, 1); lcd.print("On "); };
+  /*if (Luminosidade2 < (LumSetpoint )) { digitalWrite(11, LOW);  };
   if (Luminosidade2 > (LumSetpoint + 50)) { digitalWrite(11, HIGH);  };*/
-
-
+Serial.println("u2");
+Serial.println(Umidade2);
+Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+  
   //Controle da persiana 1
     photocellReading1 = analogRead(photocellPin1); //Query photo cell
       debug1 and Serial.print("Light Reading :");
@@ -424,6 +427,7 @@ void loop()
     delay(10); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
 
 
+Serial.println(digitalRead(9));
 
 
     
