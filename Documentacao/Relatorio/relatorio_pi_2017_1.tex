@@ -119,8 +119,20 @@
 			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. FALTA FALAR SOBRE QUAL SERVO VAMOS USAR""
 		
 	\section{Projeto de software}
+	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido a maneira que o arduino faz essas leituras, foi necessário adicionar um delay entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
+	
+	De posse dessas informações e da informação do tipo de planta que tem no slot, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
 		
 \chapter{Implementação}
+
+\section{Montagem da estrutura}
+A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual tem foi preso o display LCD com os botões, para evitar danos a parte elétrica.
+
+A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como no modelo abaixo COLOQUEM A FIGURA DO MODELO PQ NINGUEM POS AS FOTOS E ETC QND EU PEDI.
+Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
+
+A solução encontrada foi aumentar a angulação, gerando a estrutura final como na figura abaixo COLOQUEM A FIGURA ABAIXO.
+
 
 \chapter{Conclusões}
 
