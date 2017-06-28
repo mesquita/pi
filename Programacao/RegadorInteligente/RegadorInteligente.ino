@@ -20,7 +20,7 @@
 // initialize the LCD library with the numbers of the interface pins
 LiquidCrystal_I2C lcd(0x27,16,2);
 
-int Setpoint = 27, LumSetpoint = 300, HumiditySetpointAvenca = 70, HumiditySetpointRenda = 60, LumSetpointAvenca = 300, LumSetpointRenda = 400, passo = 70;
+int Setpoint = 27, LumSetpoint = 300, HumiditySetpointAvenca = 70, HumiditySetpointRenda = 50, LumSetpointAvenca = 210, LumSetpointRenda = 220, passo = 20;
 int HumiditySetpoint1, HumiditySetpoint2, LumSetpoint1, LumSetpoint2;
 
 // temperatura, umidade e luminosidade (1)
@@ -67,34 +67,38 @@ int led2 = 0;
 Servo myservo1;  // create servo object to control a servo 
                 // a maximum of eight servo objects can be created 
 int pos1 = 0;    // variable to store the servo pos1ition 
-int dest1 = 60;   // Servo dest1ination depending on photocell reading
+int dest1 = 0;   // Servo dest1ination depending on photocell reading
 int spd1 = 25;   // how fast should the servo move? 50 is quier
 
 int servoPin1=0; //havent used this yet
 int photocellPin1 = 2; // the cell and 10K pulldown are connected to a2
 int photocellReading1; // the analog reading from the analog resistor divider
 
-int state1 = 0; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
-int prevstate1 = 0;
+int state1 = 1; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
+int prevstate1 = 1;
 
-int debug1 = 0; //Set this to 1 for serial debug output
+int debug1 = 1; //Set this to 1 for serial debug output
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 Servo myservo2;  // create servo object to control a servo 
                 // a maximum of eight servo objects can be created 
-int pos2 = 100;    // variable to store the servo pos1ition 
-int dest2 =180;   // Servo dest1ination depending on photocell reading
+int pos2 = 0;    // variable to store the servo pos1ition 
+int dest2 =0;   // Servo dest1ination depending on photocell reading
 int spd2 = 25;   // how fast should the servo move? 50 is quier
 
 int servoPin2=0; //havent used this yet
 int photocellPin2 = 9; // the cell and 10K pulldown are connected to a9
 int photocellReading2; // the analog reading from the analog resistor divider
 
-int state2 = 0; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
-int prevstate2 = 0;
+int state2 = 1; //Keep track of state1 so we don't send signal to the servo without readon, better on battery life
+int prevstate2 = 1;
 
-int debug2 = 1; //Set this to 1 for serial debug output
+int debug2 = 0; //Set this to 1 for serial debug output
+
+int plantaVerdeClaro; //VERDE CLARO
+int plantaVerdeEscuro; //VERDE ESCURO
+int sair = 0;
 
 void setup()
 {
@@ -116,7 +120,6 @@ void setup()
   lcd.setCursor(0, 0);
   lcd.print("  T  RH  Lum  W");
   // lcd.print("Renata eh foda");
-    
 }
 
 void loop()
@@ -124,10 +127,14 @@ void loop()
 //debug
 /*    int plantaVerdeClaro =  HIGH; //VERDE CLARO 
     int plantaVerdeEscuro = LOW; //VERDE ESCURO
-*/
-    int plantaVerdeClaro =  digitalRead(48); //VERDE CLARO
-    int plantaVerdeEscuro = digitalRead(49); //VERDE ESCURO
-    
+*/  
+  sair = 0;
+    //if(jaleu == false)
+  //  {
+      plantaVerdeClaro =  HIGH; //VERDE CLARO
+      plantaVerdeEscuro = LOW; //VERDE ESCURO
+      //jaleu = true;
+    //}
 //HIGH -> AVENCA
 //LOW  -> RENDA
     
@@ -282,6 +289,8 @@ Serial.println(Umidade2);
 Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
   
   //Controle da persiana 1
+  do
+  {
     photocellReading1 = analogRead(photocellPin1); //Query photo cell
       debug1 and Serial.print("Light Reading :");
       debug1 and Serial.print(photocellReading1); // the raw analog reading
@@ -292,18 +301,34 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
     //Define the modes based on how bright it is, and set corresponding servo pos1ition
     if (photocellReading1 <= LumSetpoint1 + 20 && photocellReading1 >= LumSetpoint1 - 20) {
         debug1 and Serial.println("ideal");
-      //dest1=180;      
+        debug1 and Serial.println("dest1: ");
+        debug1 and Serial.println(dest1);
+      //dest2=180;      
       state1=1;
     } 
     else if (photocellReading1 < LumSetpoint1 -20) {
         debug1 and Serial.println("claro");
-      dest1=dest1 + passo;      
-      state1=2;           
+                debug1 and Serial.println("dest1: ");
+
+        debug1 and Serial.println(dest1);
+    //    if(dest1 <= 110){
+      dest1 = dest1 - passo;
+      if (dest1 < 0){
+        dest1 = 180; 
+      }     
+      state1=2;   //  }      
     } 
     else if (photocellReading1 > LumSetpoint1 + 20) {
         debug1 and Serial.println("escuro");
-      dest1=dest1-passo;
-      state1=3;
+                debug1 and Serial.println("dest1: ");
+
+        debug1 and Serial.println(dest1);
+  //      if(dest1>=70) {
+      dest1 = dest1+passo;
+      if (dest1 > 180){
+        dest1 = 0;
+      }
+      state1=3; //}
       
     } 
    /* else if (photocellReading1 < 1023) {
@@ -317,11 +342,12 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
     
 
 
-    if (state1 != prevstate1){ //IF the photocell reading is different from last sample then execute servo controls
+    if (state1 == 2 || state1 == 3){ //IF the photocell reading is different from last sample then execute servo controls
           debug1 and Serial.println("state1 Change");      
-        myservo1.attach(8);                     //Connect to servo PORTA PWM 8
+        myservo1.attach(8);                     //Connect to servo   porta  PWM 8
+    // if(dest1 <= 180 && dest1 >= 0){
         if (pos1 > dest1){  // If the current pos1ition is great than the dest1ination then we must subtract
-              //for(pos1 = pos1; pos1>=dest1; pos1-=1)     // Change current pos1ition to desired pos1ition, one degree at a time.
+              //for(pos2 = pos2; pos2>=dest2; pos2-=1)     // Change current pos1ition to desired pos1ition, one degree at a time.
               while (pos1 > dest1)
               {                                
                   debug1 and Serial.print("Was :");
@@ -336,7 +362,7 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
         } 
         else {  // If the current pos1ition is great than the dest1ination then we must add
             myservo1.attach(8);
-              //for(pos1 = pos1; pos1 <= dest1; pos1+=1)     // goes from 180 degrees to 0 degrees 
+              //for(pos2 = pos2; pos2 <= dest2; pos2+=1)     // goes from 180 degrees to 0 degrees 
               while (pos1 < dest1)
               {                        
                   debug1 and Serial.print("Was :");
@@ -351,13 +377,18 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
         myservo1.write(pos1); // Doing a write out side of the loop because I had a feeling the last pos1ition value was being skipped. I think I'm wrong though
         delay(spd1); 
         myservo1.detach();
+    //}
     }
     prevstate1 = state1; //Remember state1 so we can compare it again next round
     delay(10); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
 
+//} while(state1 != 1);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //Controle da persiana 2
+//    do
+  //  {
     photocellReading2 = analogRead(photocellPin2); //Query photo cell
       debug2 and Serial.print("Light Reading :");
       debug2 and Serial.print(photocellReading2); // the raw analog reading
@@ -378,16 +409,24 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
                 debug2 and Serial.println("dest2: ");
 
         debug2 and Serial.println(dest2);
-      dest2 = dest2 + passo;      
-      state2=2;           
+       // if(dest2 <= 110) {
+      dest2 = dest2 + passo;
+      if (dest2>180) {
+            dest2 = 0;
+        }     
+      state2=2;     //      }
     } 
     else if (photocellReading2 > LumSetpoint2 + 20) {
         debug2 and Serial.println("escuro");
                 debug2 and Serial.println("dest2: ");
 
         debug2 and Serial.println(dest2);
+//      if(dest2 >= 70) {
       dest2 = dest2-passo;
-      state2=3;
+      if (dest2 < 0){
+        dest2 = 180;
+        }
+      state2=3;  //}
       
     } 
    /* else if (photocellReading1 < 1023) {
@@ -403,7 +442,8 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
 
     if (state2 == 2 || state2 == 3){ //IF the photocell reading is different from last sample then execute servo controls
           debug2 and Serial.println("state2 Change");      
-        myservo2.attach(4);                     //Connect to servo   porta  PWM 4
+        myservo2.attach(2);                     //Connect to servo   porta  PWM 4
+if(dest2 <= 180 && dest2 >= 0){
         if (pos2 > dest2){  // If the current pos1ition is great than the dest1ination then we must subtract
               //for(pos2 = pos2; pos2>=dest2; pos2-=1)     // Change current pos1ition to desired pos1ition, one degree at a time.
               while (pos2 > dest2)
@@ -419,7 +459,7 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
             myservo2.detach();                //Detach from Servo
         } 
         else {  // If the current pos1ition is great than the dest1ination then we must add
-            myservo2.attach(4);
+            myservo2.attach(2);
               //for(pos2 = pos2; pos2 <= dest2; pos2+=1)     // goes from 180 degrees to 0 degrees 
               while (pos2 < dest2)
               {                        
@@ -436,9 +476,12 @@ Serial.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
         delay(spd2); 
         myservo2.detach();
     }
+   
     prevstate2 = state2; //Remember state1 so we can compare it again next round
     delay(10); //Optional delay, this probalby needs to be removed when IR receiver code get's added.
-
+    }
+    sair++;
+} while(sair < 5);
 
 Serial.println(digitalRead(9));
 
