@@ -51,8 +51,10 @@
 		
 		Assim, o microcontrolador agirá nos atuadores fazendo com que as necessidades das plantas sejam supridas. Neste projeto, o sistema será implementado para duas plantas diferentes.
 	\section{Organização do Documento}
+	    Este relatório é organizado da seguinte forma, no Capítulo~\ref{cap:Tecnologias} são apresentadas as tecnologias utilizadas no desenvolvimento do projeto. O Capítulo~\ref{cap:Implementacao} expõe o processo de implementação, as técnicas utilizadas e como problemas encontrados foram superados. Por fim, conclusões sobre o Projeto Integrado no Capítulo~\ref{cap:Conclusoes}.
 
 \chapter{Tecnologias Utilizadas}
+	\label{cap:Tecnologias}
 	\section{Especificações}
 	
 	\subsection{Plantas}
@@ -105,7 +107,40 @@
 		
 		Potência máxima:~100~mW.
 		
-		\subsection{Plataforma Arduino - Mega}	
+		\subsection{Plataforma Arduino - MEGA}	
+		 
+		O Arduino MEGA, representado no Figura~\ref{fig:MEGA}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.6\linewidth]{figs/ARDUINO_MEGA_A03}
+			\caption{Vista superior de um Arduino MEGA.}
+			\label{fig:MEGA}
+		\end{figure}
+		
+		\subsection{Plataforma Arduino - UNO}
+			
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=0.5\linewidth]{figs/ARDUINO_UNO_A06}
+				\caption{Vista superior de um Arduino UNO.}
+				\label{fig:UNO}
+			\end{figure}
+		
+			Um Arduino UNO, Figura~\ref{fig:UNO} foi utilizado para a implementação de um menu, onde o usuário do sistema, por meio de um \textit{display} e botões, seleciona quais serão as plantas tratadas pelo sistema. A ideia é que para um sistema comercial, um banco de dados com um grande número de plantas esteja presente para o cliente, assim o produto se adapta a cada tipo de planta, que tem necessidades de água e de iluminação diferentes. 
+			
+			O \textit{display} utilizado é mostrado na Fígura~\ref{fig:keyboard}, já conta com botões para fácil implementação de um menu, por exemplo.
+			
+		    Na seção~\ref{sec:comunicaoArduinos} discutiremos como foi implementado a comunicação entre os Arduinos. 	
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=0.7\linewidth]{figs/lcd-keyboard}
+				\caption{\textit{Display LCD Shield} com Teclado para Arduino}
+				\label{fig:keyboard}
+			\end{figure}
+			
+			
+		
 		\subsection{Mecânica}
 			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
 			
@@ -116,25 +151,44 @@
 				\label{Rotulo}
 			\end{figure}
 		
-			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. FALTA FALAR SOBRE QUAL SERVO VAMOS USAR""
+			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. 
+			
+				
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.4\linewidth]{figs/servo}
+				\caption{Micro Servo 9g SG90 TowerProMicro Servo}
+				\label{fig:SERVO}
+			\end{figure}
 		
 	\section{Projeto de software}
-	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido a maneira que o arduino faz essas leituras, foi necessário adicionar um delay entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
+	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido a maneira que o Arduino faz essas leituras, foi necessário adicionar um \textit{delay} entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
 	
-	De posse dessas informações e da informação do tipo de planta que tem no slot, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
+	De posse dessas informações e da informação do tipo de planta que tem no \textit{slot}, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
+	
+	\subsection{Comunicação entre Arduinos}
+	\label{sec:comunicaoArduinos}
+	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significado, então separá-lo do restante significou uma montagem mais confortável, em espaciais. 
+	
+	A comunicação entre os Arduinos foi feita pelas portas digitais, uma para cada estrutura. Ao digitar no teclado e escolher a planta Avenca para a primeira estrutura, o sistema envia pela primeira porta um sinal de nível lógico alto. Caso Renda for selecionada, um sinal de nível lógico baixo é enviado pela primeira porta. O mesmo para segunda estrutura, por meio da segunda porta digital um nível alto ou baixo é enviado, indicando qual planta fora escolhida. 
+	No Arduino MEGA, a recepção a leitura do sinal enviado é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, ou seja, Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
+	
+	A expansão é trivial, aumenta-se o número de portas digitais utilizadas, seguindo a mesma lógica.
 		
 \chapter{Implementação}
+	\label{cap:Implementacao}
 
 \section{Montagem da estrutura}
-A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual tem foi preso o display LCD com os botões, para evitar danos a parte elétrica.
-
-A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como no modelo abaixo COLOQUEM A FIGURA DO MODELO PQ NINGUEM POS AS FOTOS E ETC QND EU PEDI.
-Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
-
-A solução encontrada foi aumentar a angulação, gerando a estrutura final como na figura abaixo COLOQUEM A FIGURA ABAIXO.
+	A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual tem foi preso o \textit{display} LCD com os botões, para evitar danos a parte elétrica.
+	
+	A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como no modelo abaixo COLOQUEM A FIGURA DO MODELO PQ NINGUEM POS AS FOTOS E ETC QND EU PEDI.
+	Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
+	
+	A solução encontrada foi aumentar a angulação, gerando a estrutura final como na figura abaixo COLOQUEM A FIGURA ABAIXO.
 
 
 \chapter{Conclusões}
+	\label{cap:Conclusoes}
 
  
  
