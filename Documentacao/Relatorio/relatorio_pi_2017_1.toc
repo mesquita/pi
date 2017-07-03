@@ -11,11 +11,10 @@
 \contentsline {subsection}{\numberline {2.2.2}Sensor de umidade do Solo Higr\IeC {\^o}metro}{6}
 \contentsline {subsection}{\numberline {2.2.3}Sensor de luminosidade LDR 5mm}{6}
 \contentsline {subsection}{\numberline {2.2.4}Plataforma Arduino - MEGA}{6}
-\contentsline {subsection}{\numberline {2.2.5}Plataforma Arduino - UNO}{6}
-\contentsline {subsection}{\numberline {2.2.6}Mec\IeC {\^a}nica}{7}
-\contentsline {section}{\numberline {2.3}Projeto de software}{9}
-\contentsline {subsection}{\numberline {2.3.1}Comunica\IeC {\c c}\IeC {\~a}o entre Arduinos}{9}
-\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o}{11}
-\contentsline {section}{\numberline {3.1}Montagem da estrutura}{11}
-\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{12}
-\contentsline {chapter}{Bibliografia}{12}
+\contentsline {subsection}{\numberline {2.2.5}Plataforma Arduino - UNO}{7}
+\contentsline {subsection}{\numberline {2.2.6}Mec\IeC {\^a}nica}{8}
+\contentsline {section}{\numberline {2.3}Projeto de Software}{8}
+\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o}{10}
+\contentsline {section}{\numberline {3.1}Montagem da Estrutura}{10}
+\contentsline {section}{\numberline {3.2}Intera\IeC {\c c}\IeC {\~a}o com o Usu\IeC {\'a}rio}{13}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{14}

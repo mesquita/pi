@@ -37,6 +37,7 @@
 
 
 \tableofcontents
+\cleardoublepage
 \chapter{Introdução}
 	\section{Motivação}
 		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso e permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo verde, que é um sistema para o cuidado das plantas.
@@ -53,6 +54,7 @@
 	\section{Organização do Documento}
 	    Este relatório é organizado da seguinte forma, no Capítulo~\ref{cap:Tecnologias} são apresentadas as tecnologias utilizadas no desenvolvimento do projeto. O Capítulo~\ref{cap:Implementacao} expõe o processo de implementação, as técnicas utilizadas e como problemas encontrados foram superados. Por fim, conclusões sobre o Projeto Integrado no Capítulo~\ref{cap:Conclusoes}.
 
+\cleardoublepage
 \chapter{Tecnologias Utilizadas}
 	\label{cap:Tecnologias}
 	\section{Especificações}
@@ -109,7 +111,7 @@
 		
 		\subsection{Plataforma Arduino - MEGA}	
 		 
-		O Arduino MEGA, representado no Figura~\ref{fig:MEGA}
+		O Arduino MEGA, representado no Figura~\ref{fig:MEGA}, é o coração do projeto, todos os sensores e atuadores foram conectados a ele, todo o processamento ocorreu por meio dele. Através das portas analógicas os sinais dos sensores são recebidos, e dos atuadores enviados, pelas digitais há a conexão com o Arduino UNO, apresentada futuramente. O MEGA foi escolhido por apresentar uma grande quantidade de portas analógicas e digitais, assim foi possível utilizar apenas um Arduino para todos os sensores e atuadores. 
 		
 		\begin{figure}[!h]
 			\centering
@@ -154,47 +156,83 @@
 			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. 
 			
 				
-			\begin{figure}
+			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=0.4\linewidth]{figs/servo}
 				\caption{Micro Servo 9g SG90 TowerProMicro Servo}
 				\label{fig:SERVO}
 			\end{figure}
 		
-	\section{Projeto de software}
+	\section{Projeto de Software}
 	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido a maneira que o Arduino faz essas leituras, foi necessário adicionar um \textit{delay} entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
 	
 	De posse dessas informações e da informação do tipo de planta que tem no \textit{slot}, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
 	
-	\subsection{Comunicação entre Arduinos}
+
+\cleardoublepage
+\chapter{Implementação}
+	\label{cap:Implementacao}
+
+\section{Montagem da Estrutura}
+	A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual foi preso o \textit{display} LCD com os botões, para evitar danos a parte elétrica.
+	
+	A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como na Figura \ref{fig:quadrada} ??????????????????????????????????????????????
+	Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
+	
+	A solução encontrada foi aumentar a angulação, gerando a estrutura final como nas imagens apresentadas em seguida, do modelo em 3D, que foi feito para facilitar a montagem e para que fosse mostrado na apresentação intermediária, dando uma ideia para onde o Mordomo Verde estava caminhando.
+	
+	
+	
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{figs/estru1}
+	\caption{Visão frontal do sistema.}
+	\label{fig:estru1}
+	\end{figure}
+
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{figs/estru2}
+	\caption{Visão superior do sistema.}
+	\label{fig:estru2}
+	\end{figure}
+
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figs/estru3}
+	\caption{Visão lateral do sistema.}
+	\label{fig:estru3}
+	\end{figure}
+
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{figs/estru4}
+	\caption{Visão posterior do sistema.}
+	\label{fig:estru4}
+	\end{figure}
+	
+	\cleardoublepage
+	\section{Interação com o Usuário}
 	\label{sec:comunicaoArduinos}
-	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significado, então separá-lo do restante significou uma montagem mais confortável, em espaciais. 
+	A interação com o usuário foi implementada por meio de um menu, utilizando o Arduino UNO e um \textit{display} com botões.
+	
+	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significado, então separá-lo do restante significou uma montagem mais confortável, em termos espaciais. 
 	
 	A comunicação entre os Arduinos foi feita pelas portas digitais, uma para cada estrutura. Ao digitar no teclado e escolher a planta Avenca para a primeira estrutura, o sistema envia pela primeira porta um sinal de nível lógico alto. Caso Renda for selecionada, um sinal de nível lógico baixo é enviado pela primeira porta. O mesmo para segunda estrutura, por meio da segunda porta digital um nível alto ou baixo é enviado, indicando qual planta fora escolhida. 
 	No Arduino MEGA, a recepção a leitura do sinal enviado é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, ou seja, Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
 	
 	A expansão é trivial, aumenta-se o número de portas digitais utilizadas, seguindo a mesma lógica.
-		
-\chapter{Implementação}
-	\label{cap:Implementacao}
 
-\section{Montagem da estrutura}
-	A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual tem foi preso o \textit{display} LCD com os botões, para evitar danos a parte elétrica.
-	
-	A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como no modelo abaixo COLOQUEM A FIGURA DO MODELO PQ NINGUEM POS AS FOTOS E ETC QND EU PEDI.
-	Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
-	
-	A solução encontrada foi aumentar a angulação, gerando a estrutura final como na figura abaixo COLOQUEM A FIGURA ABAIXO.
-
-
+\cleardoublepage
 \chapter{Conclusões}
 	\label{cap:Conclusoes}
-
+ 	O desafio de desenvolver este projeto foram muitos, a vida real apresenta dificuldades que a teoria não nos avisa que irão existir. Experimentando, nos deparamos com diversos obstáculos, que com muito empenho foram superados. A implementação com êxito das ideias propostas no começo do semestre são fruto de um trabalho em equipe exemplar por parte deste grupo, que apresenta muita sintonia e dedicação, ao colocar em prática os conhecimentos adquiridos durante o curso de engenharia eletrônica, e outros tantos, que ou foram aprendidos na vida ou quando as dificuldades surgiram no meio da construção do projeto. Portanto, mais que apenas uma disciplina obrigatória, o Projeto Integrado aperfeiçoa todo o espectro de habilidades indispensáveis de um engenheiro. 
  
  
-\addcontentsline{toc}{chapter}{Bibliografia}
-\bibliographystyle{coppe}
-\bibliography{My_Collection_used}	
+ 
+%\addcontentsline{toc}{chapter}{Bibliografia}
+%\bibliographystyle{coppe}
+%\bibliography{My_Collection_used}	
 	
 	
 	

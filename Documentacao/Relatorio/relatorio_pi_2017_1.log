@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  2 JUL 2017 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  3 JUL 2017 00:02
 entering extended mode
 **relatorio_pi_2017_1.tex
 (relatorio_pi_2017_1.tex
@@ -425,15 +425,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Cap\'{\i }tulo 1.
 [2
 
+
 ] [3]
 Cap\'{\i }tulo 2.
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 61.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 63.
 
 <figs/renda.jpg, id=21, 230.8625pt x 230.8625pt>
 File: figs/renda.jpg Graphic file (type jpg)
  <use figs/renda.jpg>
-Package pdftex.def Info: figs/renda.jpg used on input line 65.
+Package pdftex.def Info: figs/renda.jpg used on input line 67.
 (pdftex.def)             Requested size: 155.99762pt x 155.99806pt.
 
 
@@ -442,7 +443,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figs/avenca.jpg, id=22, 224.33812pt x 244.66406pt>
 File: figs/avenca.jpg Graphic file (type jpg)
  <use figs/avenca.jpg>
-Package pdftex.def Info: figs/avenca.jpg used on input line 75.
+Package pdftex.def Info: figs/avenca.jpg used on input line 77.
 (pdftex.def)             Requested size: 155.99762pt x 170.13622pt.
 
 
@@ -450,88 +451,133 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4
 
+
 ]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 86.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 86.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 86.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 86.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
 <./figs/LM35_config_basica.png, id=27, 213.79875pt x 142.28156pt>
 File: ./figs/LM35_config_basica.png Graphic file (type png)
 
 <use ./figs/LM35_config_basica.png>
-Package pdftex.def Info: ./figs/LM35_config_basica.png used on input line 89.
+Package pdftex.def Info: ./figs/LM35_config_basica.png used on input line 91.
 (pdftex.def)             Requested size: 213.79822pt x 142.2812pt.
  [5 <./figs/renda.jpg> <./figs/avenca.jpg>]
 <figs/ARDUINO_MEGA_A03.png, id=32, 3011.25pt x 1518.67375pt>
 File: figs/ARDUINO_MEGA_A03.png Graphic file (type png)
 
 <use figs/ARDUINO_MEGA_A03.png>
-Package pdftex.def Info: figs/ARDUINO_MEGA_A03.png used on input line 116.
+Package pdftex.def Info: figs/ARDUINO_MEGA_A03.png used on input line 118.
 (pdftex.def)             Requested size: 234.00238pt x 117.99724pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/ARDUINO_UNO_A06.png, id=33, 3011.25pt x 2118.91624pt>
+ [6 <./figs/LM35_config_basica.png>]
+<figs/ARDUINO_UNO_A06.png, id=39, 3011.25pt x 2118.91624pt>
 File: figs/ARDUINO_UNO_A06.png Graphic file (type png)
 
 <use figs/ARDUINO_UNO_A06.png>
-Package pdftex.def Info: figs/ARDUINO_UNO_A06.png used on input line 125.
+Package pdftex.def Info: figs/ARDUINO_UNO_A06.png used on input line 127.
 (pdftex.def)             Requested size: 195.0pt x 137.18474pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./figs/LM35_config_basica.png>]
 <figs/lcd-keyboard.jpg, id=40, 556.32843pt x 409.53pt>
 File: figs/lcd-keyboard.jpg Graphic file (type jpg)
 
 <use figs/lcd-keyboard.jpg>
-Package pdftex.def Info: figs/lcd-keyboard.jpg used on input line 137.
+Package pdftex.def Info: figs/lcd-keyboard.jpg used on input line 139.
 (pdftex.def)             Requested size: 272.99881pt x 200.96515pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figs/valvula.jpg, id=41, 301.125pt x 247.92625pt>
+[7 <./figs/ARDUINO_MEGA_A03.png> <./figs/ARDUINO_UNO_A06.png>]
+<./figs/valvula.jpg, id=46, 301.125pt x 247.92625pt>
 File: ./figs/valvula.jpg Graphic file (type jpg)
  <use ./figs/valvula.jpg>
-Package pdftex.def Info: ./figs/valvula.jpg used on input line 149.
+Package pdftex.def Info: ./figs/valvula.jpg used on input line 151.
 (pdftex.def)             Requested size: 301.12425pt x 247.92564pt.
 
-[7 <./figs/ARDUINO_MEGA_A03.png> <./figs/ARDUINO_UNO_A06.png>]
 <figs/servo.jpg, id=47, 596.2275pt x 551.05875pt>
 File: figs/servo.jpg Graphic file (type jpg)
  <use figs/servo.jpg>
-Package pdftex.def Info: figs/servo.jpg used on input line 159.
+Package pdftex.def Info: figs/servo.jpg used on input line 161.
 (pdftex.def)             Requested size: 155.99762pt x 144.18001pt.
- [8 <./figs/lcd-keyboard.jpg> <./figs/valvula.jpg>] [9 <./figs/servo.jpg>] [10]
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./figs/lcd-keyboard.jpg>] [9 <./figs/valvula.jpg> <./figs/servo.jpg>]
 Cap\'{\i }tulo 3.
-[11
+
+LaTeX Warning: Reference `fig:quadrada' on page 10 undefined on input line 179.
+
+
+<figs/estru1.jpg, id=54, 615.80063pt x 223.58531pt>
+File: figs/estru1.jpg Graphic file (type jpg)
+ <use figs/estru1.jpg>
+Package pdftex.def Info: figs/estru1.jpg used on input line 188.
+(pdftex.def)             Requested size: 390.0pt x 141.60321pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/estru2.jpg, id=55, 771.63281pt x 344.03531pt>
+File: figs/estru2.jpg Graphic file (type jpg)
+ <use figs/estru2.jpg>
+Package pdftex.def Info: figs/estru2.jpg used on input line 195.
+(pdftex.def)             Requested size: 390.0pt x 173.88081pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/estru3.jpg, id=56, 252.945pt x 346.29375pt>
+File: figs/estru3.jpg Graphic file (type jpg)
+ <use figs/estru3.jpg>
+Package pdftex.def Info: figs/estru3.jpg used on input line 202.
+(pdftex.def)             Requested size: 155.99762pt x 213.56912pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/estru4.jpg, id=57, 708.39656pt x 249.93375pt>
+File: figs/estru4.jpg Graphic file (type jpg)
+ <use figs/estru4.jpg>
+Package pdftex.def Info: figs/estru4.jpg used on input line 209.
+(pdftex.def)             Requested size: 390.0pt x 137.60127pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10
+
+
+] [11 <./figs/estru1.jpg> <./figs/estru2.jpg>] [12 <./figs/estru3.jpg> <./figs/
+estru4.jpg>] [13
 
 ]
 Cap\'{\i }tulo 4.
-(relatorio_pi_2017_1.bbl) [12
+[14
+
 
 ] (relatorio_pi_2017_1.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12715 strings out of 493673
- 245127 string characters out of 3151267
- 292287 words of memory out of 3000000
- 15830 multiletter control sequences out of 15000+200000
+ 12737 strings out of 493673
+ 245495 string characters out of 3151267
+ 292327 words of memory out of 3000000
+ 15851 multiletter control sequences out of 15000+200000
  9761 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,7n,54p,889b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -540,9 +586,9 @@ ublic/amsfonts/cm/cmmi12.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmr12.pf
 b><C:/miktek/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miktek/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/miktek/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relatorio_pi_2017_1.pdf (13 pages, 6533183 bytes).
+Output written on relatorio_pi_2017_1.pdf (15 pages, 7535863 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
