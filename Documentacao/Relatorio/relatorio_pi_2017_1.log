@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  3 JUL 2017 00:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.18)  3 JUL 2017 01:19
 entering extended mode
-**relatorio_pi_2017_1.tex
-(relatorio_pi_2017_1.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(C:\miktek\tex\latex\base\report.cls
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./relatorio_pi_2017_1.tex
+(./relatorio_pi_2017_1.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(c:/texlive/2016/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(C:\miktek\tex\latex\base\size12.clo
+(c:/texlive/2016/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,17 +23,19 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (C:\miktek\tex\latex\base\inputenc.sty
+)
+(c:/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(C:\miktek\tex\latex\ucs\utf8x.def
+(c:/texlive/2016/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-)) (C:\miktek\tex\latex\ucs\ucs.sty
+))
+(c:/texlive/2016/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(C:\miktek\tex\latex\ucs\uni-global.def
+(c:/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count88
@@ -39,62 +43,56 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
 )
-(C:\miktek\tex\generic\babel\babel.sty
-Package: babel 2015/08/03 3.9m The Babel package
+(c:/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\miktek\tex\latex\00miktex\bblopts.cfg
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-(C:\miktek\tex\latex\babel-portuges\portuges.ldf
+(c:/texlive/2016/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(C:\miktek\tex\generic\babel\babel.def
-File: babel.def 2015/08/03 3.9m Babel common definitions
+(c:/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 145.
 )
-(C:\miktek\tex\latex\babel-portuges\portuges.ldf
+(c:/texlive/2016/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
 ))
-(C:\miktek\tex\latex\graphics\graphicx.sty
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\miktek\tex\latex\graphics\keyval.sty
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(C:\miktek\tex\latex\graphics\graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\miktek\tex\latex\graphics\trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\miktek\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(C:\miktek\tex\latex\pdftex-def\pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(C:\miktek\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(C:\miktek\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(C:\miktek\tex\latex\fancyvrb\fancyvrb.sty
+(c:/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -105,7 +103,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \c@FancyVerbLine=\count92
 \FV@StepNumber=\count93
 \FV@OutFile=\write3
-) (C:\miktek\tex\latex\float\float.sty
+) (c:/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count94
 \float@exts=\toks20
@@ -113,36 +111,36 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks21
 \@floatcapt=\box28
 )
-(C:\miktek\tex\latex\pgf\frontendlayer\tikz.sty
-(C:\miktek\tex\latex\pgf\basiclayer\pgf.sty
-(C:\miktek\tex\latex\pgf\utilities\pgfrcs.sty
-(C:\miktek\tex\generic\pgf\utilities\pgfutil-common.tex
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks22
 \pgfutil@tempdima=\dimen106
 \pgfutil@tempdimb=\dimen107
 
-(C:\miktek\tex\generic\pgf\utilities\pgfutil-common-lists.tex))
-(C:\miktek\tex\generic\pgf\utilities\pgfutil-latex.def
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
+) (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box29
 
-(C:\miktek\tex\latex\ms\everyshi.sty
+(c:/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(C:\miktek\tex\generic\pgf\utilities\pgfrcs.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
-(C:\miktek\tex\latex\pgf\basiclayer\pgfcore.sty
-(C:\miktek\tex\latex\pgf\systemlayer\pgfsys.sty
-(C:\miktek\tex\generic\pgf\systemlayer\pgfsys.code.tex
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
-(C:\miktek\tex\generic\pgf\utilities\pgfkeys.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks23
 \pgfkeys@temptoks=\toks24
 
-(C:\miktek\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks25
 ))
 \pgf@x=\dimen108
@@ -162,48 +160,48 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \t@pgf@toka=\toks26
 \t@pgf@tokb=\toks27
 \t@pgf@tokc=\toks28
-
-(C:\miktek\tex\generic\pgf\systemlayer\pgf.cfg
+ (c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(C:\miktek\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-(C:\miktek\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-(C:\miktek\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count99
 \pgfsyssoftpath@bigbuffer@items=\count100
 )
-(C:\miktek\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(C:\miktek\tex\latex\xcolor\xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
- (C:\miktek\tex\latex\00miktex\color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)) (c:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (C:\miktek\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 
-(C:\miktek\tex\generic\pgf\math\pgfmath.code.tex
-(C:\miktek\tex\generic\pgf\math\pgfmathcalc.code.tex
-(C:\miktek\tex\generic\pgf\math\pgfmathutil.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathparser.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen116
 \pgfmath@count=\count101
 \pgfmath@box=\box30
@@ -211,19 +209,27 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks30
 \pgfmath@stack@operation=\toks31
 )
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.code.tex
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.base.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)
-(C:\miktek\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex)))
-(C:\miktek\tex\generic\pgf\math\pgfmathfloat.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)))
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count102
 ))
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen117
 \pgf@picmaxx=\dimen118
@@ -240,100 +246,108 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen129
 \pgf@zy=\dimen130
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen131
 \pgf@path@lasty=\dimen132
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen133
 \pgf@shorten@start@additional=\dimen134
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box31
 \pgf@hbox=\box32
 \pgf@layerbox@main=\box33
 \pgf@picture@serial@count=\count103
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen135
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen136
 \pgf@pt@y=\dimen137
 \pgf@pt@temp=\dimen138
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen139
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen140
 \pgf@sys@shading@range@num=\count104
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box34
 ))
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-(C:\miktek\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-(C:\miktek\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box35
 )
-(C:\miktek\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-(C:\miktek\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen141
 \pgf@nodesepend=\dimen142
 )
-(C:\miktek\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-(C:\miktek\tex\latex\pgf\utilities\pgffor.sty
-(C:\miktek\tex\latex\pgf\utilities\pgfkeys.sty
-(C:\miktek\tex\generic\pgf\utilities\pgfkeys.code.tex))
-(C:\miktek\tex\latex\pgf\math\pgfmath.sty
-(C:\miktek\tex\generic\pgf\math\pgfmath.code.tex))
-(C:\miktek\tex\generic\pgf\utilities\pgffor.code.tex
+)) (c:/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2016/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-(C:\miktek\tex\generic\pgf\math\pgfmath.code.tex)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen143
 \pgffor@skip=\dimen144
 \pgffor@stack=\toks32
 \pgffor@toks=\toks33
 ))
-(C:\miktek\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-(C:\miktek\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count105
 \pgfplotmarksize=\dimen145
@@ -353,7 +367,7 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count108
 \tikz@fig@count=\count109
 
-(C:\miktek\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count110
 \pgfmatrixcurrentcolumn=\count111
@@ -361,12 +375,20 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count113
 
-(C:\miktek\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code
-.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-))) (C:\miktek\tex\latex\multirow\multirow.sty
+)))
+(c:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count114
+\multirow@dima=\skip44
 \bigstrutjot=\dimen152
-) (relatorio_pi_2017_1.aux)
+)
+(./relatorio_pi_2017_1.aux)
+\openout1 = `relatorio_pi_2017_1.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
@@ -380,33 +402,83 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 
-(C:\miktek\tex\latex\ucs\ucsencs.def
+(c:/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
-) (C:\miktek\tex\context\base\supp-pdf.mkii
+)
+(c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count115
 \scratchdimen=\dimen153
 \scratchbox=\box40
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count116
+\nofMParguments=\count117
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count117
+\MPscratchCnt=\count118
 \MPscratchDim=\dimen154
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
 \everyMPtoPDFconversion=\toks35
-) ABD: EveryShipout initializing macros (C:\miktek\tex\latex\ucs\uni-0.def
+) (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+(c:/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 36.
+ [1
 
-[1
-
-{C:/Users/Vinicius/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(relatorio_pi_2017_1.toc
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./relatorio_pi
+_2017_1.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -415,10 +487,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 )
 \tf@toc=\write5
- [1
+\openout5 = `relatorio_pi_2017_1.toc'.
+
+
+[1
 
 ]
 Cap\'{\i }tulo 1.
+
+Overfull \hbox (12.00694pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/12 De posse des-sas in-forma^^Xc~oes, o mi-cro-con-tro-la-dor us
+ar^^Sa uma rela^^Xc~ao biol^^Sogica
+ []
+
 [2
 
 
@@ -427,7 +508,7 @@ Cap\'{\i }tulo 2.
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 63.
 
-<figs/renda.jpg, id=21, 230.8625pt x 230.8625pt>
+<figs/renda.jpg, id=22, 230.8625pt x 230.8625pt>
 File: figs/renda.jpg Graphic file (type jpg)
  <use figs/renda.jpg>
 Package pdftex.def Info: figs/renda.jpg used on input line 67.
@@ -436,7 +517,7 @@ Package pdftex.def Info: figs/renda.jpg used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/avenca.jpg, id=22, 224.33812pt x 244.66406pt>
+<figs/avenca.jpg, id=23, 224.33812pt x 244.66406pt>
 File: figs/avenca.jpg Graphic file (type jpg)
  <use figs/avenca.jpg>
 Package pdftex.def Info: figs/avenca.jpg used on input line 77.
@@ -461,28 +542,28 @@ LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
-<./figs/LM35_config_basica.png, id=27, 213.79875pt x 142.28156pt>
+<./figs/LM35_config_basica.png, id=28, 213.79875pt x 142.28156pt>
 File: ./figs/LM35_config_basica.png Graphic file (type png)
 
 <use ./figs/LM35_config_basica.png>
 Package pdftex.def Info: ./figs/LM35_config_basica.png used on input line 91.
 (pdftex.def)             Requested size: 213.79822pt x 142.2812pt.
  [5 <./figs/renda.jpg> <./figs/avenca.jpg>]
-<figs/ARDUINO_MEGA_A03.png, id=32, 3011.25pt x 1518.67375pt>
+<figs/ARDUINO_MEGA_A03.png, id=33, 3011.25pt x 1518.67375pt>
 File: figs/ARDUINO_MEGA_A03.png Graphic file (type png)
 
 <use figs/ARDUINO_MEGA_A03.png>
 Package pdftex.def Info: figs/ARDUINO_MEGA_A03.png used on input line 118.
 (pdftex.def)             Requested size: 234.00238pt x 117.99724pt.
  [6 <./figs/LM35_config_basica.png>]
-<figs/ARDUINO_UNO_A06.png, id=39, 3011.25pt x 2118.91624pt>
+<figs/ARDUINO_UNO_A06.png, id=40, 3011.25pt x 2118.91624pt>
 File: figs/ARDUINO_UNO_A06.png Graphic file (type png)
 
 <use figs/ARDUINO_UNO_A06.png>
 Package pdftex.def Info: figs/ARDUINO_UNO_A06.png used on input line 127.
 (pdftex.def)             Requested size: 195.0pt x 137.18474pt.
 
-<figs/lcd-keyboard.jpg, id=40, 556.32843pt x 409.53pt>
+<figs/lcd-keyboard.jpg, id=41, 556.32843pt x 409.53pt>
 File: figs/lcd-keyboard.jpg Graphic file (type jpg)
 
 <use figs/lcd-keyboard.jpg>
@@ -493,55 +574,55 @@ Package pdftex.def Info: figs/lcd-keyboard.jpg used on input line 139.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <./figs/ARDUINO_MEGA_A03.png> <./figs/ARDUINO_UNO_A06.png>]
-<figs/valvula.jpg, id=46, 301.125pt x 247.92625pt>
+<figs/valvula.jpg, id=47, 301.125pt x 247.92625pt>
 File: figs/valvula.jpg Graphic file (type jpg)
  <use figs/valvula.jpg>
 Package pdftex.def Info: figs/valvula.jpg used on input line 151.
 (pdftex.def)             Requested size: 155.99762pt x 128.44194pt.
 
 [8 <./figs/lcd-keyboard.jpg> <./figs/valvula.jpg>]
-<figs/servo.jpg, id=50, 596.2275pt x 551.05875pt>
+<figs/servo.jpg, id=51, 596.2275pt x 551.05875pt>
 File: figs/servo.jpg Graphic file (type jpg)
  <use figs/servo.jpg>
-Package pdftex.def Info: figs/servo.jpg used on input line 161.
+Package pdftex.def Info: figs/servo.jpg used on input line 162.
 (pdftex.def)             Requested size: 155.99762pt x 144.18001pt.
  [9 <./figs/servo.jpg>]
 Cap\'{\i }tulo 3.
 
-LaTeX Warning: Reference `fig:quadrada' on page 10 undefined on input line 179.
+LaTeX Warning: Reference `fig:quadrada' on page 10 undefined on input line 181.
 
 
-<figs/estru1.jpg, id=54, 615.80063pt x 223.58531pt>
+<figs/estru1.jpg, id=55, 615.80063pt x 223.58531pt>
 File: figs/estru1.jpg Graphic file (type jpg)
  <use figs/estru1.jpg>
-Package pdftex.def Info: figs/estru1.jpg used on input line 188.
+Package pdftex.def Info: figs/estru1.jpg used on input line 190.
 (pdftex.def)             Requested size: 390.0pt x 141.60321pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/estru2.jpg, id=55, 771.63281pt x 344.03531pt>
+<figs/estru2.jpg, id=56, 771.63281pt x 344.03531pt>
 File: figs/estru2.jpg Graphic file (type jpg)
  <use figs/estru2.jpg>
-Package pdftex.def Info: figs/estru2.jpg used on input line 195.
+Package pdftex.def Info: figs/estru2.jpg used on input line 197.
 (pdftex.def)             Requested size: 390.0pt x 173.88081pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/estru3.jpg, id=56, 252.945pt x 346.29375pt>
+<figs/estru3.jpg, id=57, 252.945pt x 346.29375pt>
 File: figs/estru3.jpg Graphic file (type jpg)
  <use figs/estru3.jpg>
-Package pdftex.def Info: figs/estru3.jpg used on input line 202.
+Package pdftex.def Info: figs/estru3.jpg used on input line 204.
 (pdftex.def)             Requested size: 155.99762pt x 213.56912pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/estru4.jpg, id=57, 708.39656pt x 249.93375pt>
+<figs/estru4.jpg, id=58, 708.39656pt x 249.93375pt>
 File: figs/estru4.jpg Graphic file (type jpg)
  <use figs/estru4.jpg>
-Package pdftex.def Info: figs/estru4.jpg used on input line 209.
+Package pdftex.def Info: figs/estru4.jpg used on input line 211.
 (pdftex.def)             Requested size: 390.0pt x 137.60127pt.
 
 
@@ -558,27 +639,30 @@ Cap\'{\i }tulo 4.
 [14
 
 
-] (relatorio_pi_2017_1.aux)
+] (./relatorio_pi_2017_1.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12738 strings out of 493673
- 245500 string characters out of 3151267
- 292300 words of memory out of 3000000
- 15852 multiletter control sequences out of 15000+200000
- 9761 words of font info for 34 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 55i,7n,54p,889b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/miktek/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/miktek/fonts/type1/p
-ublic/amsfonts/cm/cmmi12.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/miktek/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miktek/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-C:/miktek/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relatorio_pi_2017_1.pdf (15 pages, 7535847 bytes).
+ 13140 strings out of 493013
+ 256150 string characters out of 6136993
+ 303407 words of memory out of 5000000
+ 16418 multiletter control sequences out of 15000+600000
+ 9761 words of font info for 34 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,7n,54p,888b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb>
+Output written on relatorio_pi_2017_1.pdf (15 pages, 7527707 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

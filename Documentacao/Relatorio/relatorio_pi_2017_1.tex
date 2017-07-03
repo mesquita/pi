@@ -42,13 +42,13 @@
 	\section{Motivação}
 		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso e permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo Verde, que é um sistema para o cuidado das plantas.
 	\section{Objetivo}
-		Este projeto tem por objetivo a construção de um sistema que regue e controle a quantidade de luz solar recebida por plantas, uma vez sabido a espécie da mesma.
+		Este projeto tem por objetivo a construção de um sistema que regue e controle a quantidade de luz solar recebida por plantas, uma vez conhecida a espécie da mesma.
 		
 		A ideia é interagir com o usuário por meio de um \textit{display} LCD e botões do mesmo módulo, para que ele possa determinar qual é a espécie da planta, entre as pré-determinadas. 
 		
-		Além disso, haverá o sensoriamento do ambiente. Colhendo informações de temperatura, umidade e luminosidade.
+		Além disso, haverá o sensoriamento do ambiente, colhendo informações de temperatura, umidade e luminosidade.
 		
-		De posse de ambas as informações, o microcontrolador usará uma relação biológica para decidir a quantidade de água e a inclinação das persianas necessária. 
+		De posse dessas informações, o microcontrolador usará uma relação biológica para decidir a quantidade de água e a inclinação das persianas necessária. 
 		
 		Assim, o microcontrolador agirá nos atuadores fazendo com que as necessidades das plantas sejam supridas. Neste projeto, o sistema será implementado para duas plantas diferentes.
 	\section{Organização do Documento}
@@ -60,7 +60,7 @@
 	\section{Especificações}
 	
 	\subsection{Plantas}
-	Duas plantas de espécies diferentes foram utilizadas durante o desenvolvimento do projeto. A renda-portuguesa (\textit{Davallia fejeensis}), Figura~\ref{fig:renda}, é uma planta nativa da ilhas Fiji, que se desenvolve melhor em ambientes iluminados, porém sem sol direto, que pode ser cultivada no interior de apartamentos, no chão ou em local baixo, perto da janela. Uma vez que a renda-portuguesa também não deve ficar exposta ao vento, pois é frágil. Ela deve ser regada, em dias quentes, ou seja, temperaturas acima dos 30$\textdegree$~C, todos os dias; quando abaixo disso, de dois em dois dias. Mas sempre é recomendado verificar a umidade do solo, a fim de certifica-se que o mesmo se encontra devidamente úmido. Discussões sobre a quantificação desses valores serão discutidos na seção %ref da seção \ref{sec:q}%.
+	Duas plantas de espécies diferentes foram utilizadas durante o desenvolvimento do projeto. A renda-portuguesa (\textit{Davallia fejeensis}), Figura~\ref{fig:renda}, é uma planta nativa da ilhas Fiji, que se desenvolve melhor em ambientes iluminados, porém sem sol direto, que pode ser cultivada no interior de apartamentos, no chão ou em local baixo, perto da janela. Uma vez que a renda-portuguesa também não deve ficar exposta ao vento, pois é frágil. Ela deve ser regada, em dias quentes, ou seja, temperaturas acima dos 30$\textdegree$~C, todos os dias; quando abaixo disso, de dois em dois dias. Mas sempre é recomendado verificar a umidade do solo, a fim de certificar-se que o mesmo se encontra devidamente úmido. Discussões sobre a quantificação desses valores serão feitas na seção %ref da seção \ref{sec:q}%.
 		
 \begin{figure}[!h]
 	\centering
@@ -69,7 +69,7 @@
 	\label{fig:renda}
 \end{figure}
 
-	A segunda planta adquirida foi uma avenca (\textit{Adiantum capillus-veneris}), que pode ser vista na Figura~\ref{fig:avenca}. Ela precisa de um ambiente úmido, quente e de luminosidade indireta, com esses ingredientes ela é capaz de se desenvolver de forma saudável. Assim como a renda-portuguesa, ela não deve receber vento diretamente. Como a umidade é um ponto-chave para seu desenvolvimento, deve-se verificar que a mesma mantenha uma umidade do solo maior que quando comparado com a planta anterior. Logo, em um tempo quente ela deve ser regada mais constantemente. Com essas características, a avenca também pode se desenvolver bem em um ambiente como um apartamento, o que torna a dupla de exemplares escolhida muito boa para o nosso projeto. 
+	A segunda planta adquirida foi uma avenca (\textit{Adiantum capillus-veneris}), que pode ser vista na Figura~\ref{fig:avenca}. Ela precisa de um ambiente úmido, quente e de luminosidade indireta. Com esses ingredientes, ela é capaz de se desenvolver de forma saudável. Assim como a renda-portuguesa, ela não deve receber vento diretamente. Como a umidade é um ponto-chave para seu desenvolvimento, deve-se verificar que a mesma mantenha uma umidade do solo maior que quando comparado com a planta anterior. Logo, em um tempo quente ela deve ser regada mais constantemente. Com essas características, a avenca também pode se desenvolver bem em um ambiente como um apartamento, o que torna a dupla de exemplares escolhida muito boa para o nosso projeto. 
 	
 	 
 \begin{figure}[!h]
@@ -85,7 +85,7 @@
 		
 		Sensor de precisão de temperatura centígrado, apresenta uma saída em tensão linearmente proporcional a graus Celsius. Além disso, não necessita de nenhuma calibração externa.
 		
-		Dentre suas especificações, ressaltamos, a sua acurácia de 0.5$\textdegree$ (a +25$\textdegree$ Celsius), suficiente para aplicação. Além disso, sensor é capaz de medir temperaturas de -50$\textdegree$ a 150$\textdegree$ Celsius, o que cobre a faixa dinâmica de trabalho no projeto. Apesar disso, usaremos o sensor na configuração básica conforme a Figura 2.1 Consideramos também a faixa de tensão de trabalho que é de 4~V a 30~V, o que permite a alimentação com a placa escolhida e drena menos de 60~$\mu$A, também dentro da capacidade da placa.
+		Dentre suas especificações, ressaltamos, a sua acurácia de 0.5$\textdegree$ (a +25$\textdegree$ Celsius), suficiente para aplicação. Além disso, o sensor é capaz de medir temperaturas de -50$\textdegree$ a 150$\textdegree$ Celsius, o que cobre a faixa dinâmica de trabalho no projeto. Apesar disso, usaremos o sensor na configuração básica conforme a Figura 2.3. Consideramos também a faixa de tensão de trabalho que é de 4~V a 30~V, o que permite a alimentação com a placa escolhida e drena menos de 60~$\mu$A, também dentro da capacidade da placa.
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics{LM35_config_basica}
@@ -93,12 +93,12 @@
 			\label{Rotulo}
 		\end{figure}
 		\subsection{Sensor de umidade do Solo Higrômetro}
-		Sensor é capaz de perceber variações da umidade do solo, tem saída em volts que é linearmente depende da umidade.
-		Trabalha com tensão de Operação: 3, 3 - 5 V, o que torna viável sua utilização com o Arduino. Tem saída digital em LED, com a sensibilidade calibrada por potenciômetro. Mas essa função não será utilizada no projeto.
+		Sensor capaz de perceber variações da umidade do solo, tem saída em volts que é linearmente depende da umidade.
+		Trabalha com tensão de operação de 3,3 a 5 V, o que torna viável sua utilização com o Arduino. Tem saída digital em LED, com a sensibilidade calibrada por potenciômetro, mas esta função não será utilizada no projeto.
 	
 		\subsection{Sensor de luminosidade LDR 5mm}
 		
-		Sensor de Luminosidade LDR de 5~mm de diâmetro. Este altera a resistência em seus terminais conforme a luminosidade que é submetido.
+		Sensor de Luminosidade LDR de 5~mm de diâmetro. Este sensor altera a resistência em seus terminais conforme a luminosidade à qual é submetido.
 		
 		Especificações:
 		Resistência quando há luz :~1~k$\Omega$.
@@ -111,7 +111,7 @@
 		
 		\subsection{Plataforma Arduino - MEGA}	
 		 
-		O Arduino MEGA, representado no Figura~\ref{fig:MEGA}, é o coração do projeto, todos os sensores e atuadores foram conectados a ele, todo o processamento ocorreu por meio dele. Através das portas analógicas os sinais dos sensores são recebidos, e dos atuadores enviados, pelas digitais há a conexão com o Arduino UNO, apresentada futuramente. O MEGA foi escolhido por apresentar uma grande quantidade de portas analógicas e digitais, assim foi possível utilizar apenas um Arduino para todos os sensores e atuadores. 
+		O Arduino MEGA, representado na Figura~\ref{fig:MEGA}, é o coração do projeto: todos os sensores e atuadores foram conectados a ele e todo o processamento ocorreu por meio dele. Através das portas analógicas, os sinais dos sensores são recebidos e os dos atuadores enviados; pelas portas digitais, há a conexão com o Arduino UNO, apresentada posteriormente. O MEGA foi escolhido por apresentar uma grande quantidade de portas analógicas e digitais, tornando possível utilizar apenas um Arduino para todos os sensores e atuadores. 
 		
 		\begin{figure}[!h]
 			\centering
@@ -129,9 +129,9 @@
 				\label{fig:UNO}
 			\end{figure}
 		
-			Um Arduino UNO, Figura~\ref{fig:UNO} foi utilizado para a implementação de um menu, onde o usuário do sistema, por meio de um \textit{display} e botões, seleciona quais serão as plantas tratadas pelo sistema. A ideia é que para um sistema comercial, um banco de dados com um grande número de plantas esteja presente para o cliente, assim o produto se adapta a cada tipo de planta, que tem necessidades de água e de iluminação diferentes. 
+			Um Arduino UNO, Figura~\ref{fig:UNO} foi utilizado para a implementação de um menu, onde o usuário do sistema, por meio de um \textit{display} e botões, seleciona quais serão as plantas tratadas pelo sistema. A ideia é que para um sistema comercial, um banco de dados com um grande número de plantas esteja presente para o cliente. Assim, o produto se adaptaria a cada tipo de planta, que tem necessidades de água e de iluminação diferentes. 
 			
-			O \textit{display} utilizado é mostrado na Fígura~\ref{fig:keyboard}, já conta com botões para fácil implementação de um menu, por exemplo.
+			O \textit{display} utilizado é mostrado na Figura~\ref{fig:keyboard} e já conta com botões para fácil implementação de um menu, por exemplo.
 			
 		    Na seção~\ref{sec:comunicaoArduinos} discutiremos como foi implementado a comunicação entre os Arduinos. 	
 			\begin{figure}[!h]
@@ -144,7 +144,7 @@
 			
 		
 		\subsection{Mecânica}
-			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides, Figura~\ref{fig:VALVULA}. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
+			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides, como mostrado na Figura~\ref{fig:VALVULA}. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
 			
 			\begin{figure}[!h]
 				\centering
@@ -153,7 +153,8 @@
 				\label{fig:VALVULA}
 			\end{figure}
 		
-			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. 
+			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. Foram utilizadas persianas comuns, compradas em uma loja de materiais de construção. Elas possuíam uma espécie de canaleta na parte superior, onde foi possível encaixar o servo para realizar o controle. Uma discussão maior sobre o encaixe entre o servo e a persiana é feita na seção~\ref{sec:montagem}. \\
+			As persianas foram presas na parte superior da estrutura, de forma que cobrissem completamente a superfície por onde a luz poderia atingir a planta. Assim, a iluminação era dependia totalmente do grau de abertura das persianas, controlado pelo servo. 
 			
 				
 			\begin{figure}[!h]
@@ -174,12 +175,13 @@
 	\label{cap:Implementacao}
 
 \section{Montagem da Estrutura}
-	A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plásticos para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, a qual foi preso o \textit{display} LCD com os botões, para evitar danos a parte elétrica.
+	\label{sec:montagem}
+	A estrutura do projeto foi feita com canos PVC, pelo custo e resistência a água do material. Os sensores foram presos a uma plataforma de plástico para facilitar o manuseio do usuário final. Por fim, o Arduino e suas ligações foram colocadas em uma caixa, à qual foi preso o \textit{display} LCD com os botões, para evitar danos a parte elétrica.
 	
 	A ideia inicial era fazer uma estrutura retangular e prender a persiana por cima como na Figura \ref{fig:quadrada} ??????????????????????????????????????????????
 	Contudo, durante a execução do projeto, como já tinha sido avaliado, constatamos que a inclinação de 90º não era suficiente para o funcionamento ideal dos sistemas de persianas.
 	
-	A solução encontrada foi aumentar a angulação, gerando a estrutura final como nas imagens apresentadas em seguida, do modelo em 3D, que foi feito para facilitar a montagem e para que fosse mostrado na apresentação intermediária, dando uma ideia para onde o Mordomo Verde estava caminhando.
+	A solução encontrada foi aumentar a angulação, gerando a estrutura final como nas imagens apresentadas em seguida, do modelo em 3D, que foi feito para facilitar a montagem e para que fosse mostrado na apresentação intermediária, dando uma ideia de para onde o Mordomo Verde estava caminhando.
 	
 	
 	
@@ -211,6 +213,8 @@
 	\label{fig:estru4}
 	\end{figure}
 	
+	O que a princípio parecia uma tarefa trivial, a conexão entre o servo e o eixo da persiana mostrou-se um desafio inesperado. Inicialmente, uma haste, que podia ser encaixada no servo, foi colada no eixo da persiana com cola especial para plástico. Desta forma, bastaria encaixar o servo no local correto para o sistema estar pronto para o uso. Porém, a superfície de contato entre as peças que foram coladas mostrou-se muito pequena, o que fez com que a cola soltasse por diversas vezes. Após várias tentativas, conseguiu-se fixar as duas peças utilizando cola Super Bonder.
+	
 	\cleardoublepage
 	\section{Interação com o Usuário}
 	\label{sec:comunicaoArduinos}
@@ -226,7 +230,7 @@
 \cleardoublepage
 \chapter{Conclusões}
 	\label{cap:Conclusoes}
- 	O desafio de desenvolver este projeto foram muitos, a vida real apresenta dificuldades que a teoria não nos avisa que irão existir. Experimentando, nos deparamos com diversos obstáculos, que com muito empenho foram superados. A implementação com êxito das ideias propostas no começo do semestre são fruto de um trabalho em equipe exemplar por parte deste grupo, que apresenta muita sintonia e dedicação, ao colocar em prática os conhecimentos adquiridos durante o curso de engenharia eletrônica, e outros tantos, que ou foram aprendidos na vida ou quando as dificuldades surgiram no meio da construção do projeto. Portanto, mais que apenas uma disciplina obrigatória, o Projeto Integrado aperfeiçoa todo o espectro de habilidades indispensáveis de um engenheiro. 
+ 	Os desafios no desenvolvimento deste projeto foram muitos, a vida real apresenta dificuldades que a teoria não nos avisa que irão existir. Experimentando, nos deparamos com diversos obstáculos, que com muito empenho foram superados. A implementação com êxito das ideias propostas no começo do semestre são fruto de um trabalho em equipe exemplar por parte deste grupo, que apresenta muita sintonia e dedicação, ao colocar em prática os conhecimentos adquiridos durante o curso de engenharia eletrônica, e outros tantos, que ou foram aprendidos na vida ou quando as dificuldades surgiram no meio da construção do projeto. Portanto, mais que apenas uma disciplina obrigatória, o Projeto Integrado aperfeiçoa todo o espectro de habilidades indispensáveis de um engenheiro. 
  
  
  
