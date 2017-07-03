@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  3 JUL 2017 00:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  3 JUL 2017 00:22
 entering extended mode
 **relatorio_pi_2017_1.tex
 (relatorio_pi_2017_1.tex
@@ -366,11 +366,7 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) (C:\miktek\tex\latex\multirow\multirow.sty
 \bigstrutjot=\dimen152
-) (relatorio_pi_2017_1.aux
-
-LaTeX Warning: Label `Rotulo' multiply defined.
-
-)
+) (relatorio_pi_2017_1.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
@@ -383,10 +379,10 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
- (C:\miktek\tex\latex\ucs\ucsencs.def
+
+(C:\miktek\tex\latex\ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
-)
-(C:\miktek\tex\context\base\supp-pdf.mkii
+) (C:\miktek\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count114
 \scratchdimen=\dimen153
@@ -497,22 +493,19 @@ Package pdftex.def Info: figs/lcd-keyboard.jpg used on input line 139.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <./figs/ARDUINO_MEGA_A03.png> <./figs/ARDUINO_UNO_A06.png>]
-<./figs/valvula.jpg, id=46, 301.125pt x 247.92625pt>
-File: ./figs/valvula.jpg Graphic file (type jpg)
- <use ./figs/valvula.jpg>
-Package pdftex.def Info: ./figs/valvula.jpg used on input line 151.
-(pdftex.def)             Requested size: 301.12425pt x 247.92564pt.
+<figs/valvula.jpg, id=46, 301.125pt x 247.92625pt>
+File: figs/valvula.jpg Graphic file (type jpg)
+ <use figs/valvula.jpg>
+Package pdftex.def Info: figs/valvula.jpg used on input line 151.
+(pdftex.def)             Requested size: 155.99762pt x 128.44194pt.
 
-<figs/servo.jpg, id=47, 596.2275pt x 551.05875pt>
+[8 <./figs/lcd-keyboard.jpg> <./figs/valvula.jpg>]
+<figs/servo.jpg, id=50, 596.2275pt x 551.05875pt>
 File: figs/servo.jpg Graphic file (type jpg)
  <use figs/servo.jpg>
 Package pdftex.def Info: figs/servo.jpg used on input line 161.
 (pdftex.def)             Requested size: 155.99762pt x 144.18001pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./figs/lcd-keyboard.jpg>] [9 <./figs/valvula.jpg> <./figs/servo.jpg>]
+ [9 <./figs/servo.jpg>]
 Cap\'{\i }tulo 3.
 
 LaTeX Warning: Reference `fig:quadrada' on page 10 undefined on input line 179.
@@ -569,15 +562,12 @@ Cap\'{\i }tulo 4.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 12737 strings out of 493673
- 245495 string characters out of 3151267
- 292327 words of memory out of 3000000
- 15851 multiletter control sequences out of 15000+200000
+ 12738 strings out of 493673
+ 245500 string characters out of 3151267
+ 292300 words of memory out of 3000000
+ 15852 multiletter control sequences out of 15000+200000
  9761 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,7n,54p,889b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -586,7 +576,7 @@ ublic/amsfonts/cm/cmmi12.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmr12.pf
 b><C:/miktek/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miktek/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/miktek/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relatorio_pi_2017_1.pdf (15 pages, 7535863 bytes).
+Output written on relatorio_pi_2017_1.pdf (15 pages, 7535847 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

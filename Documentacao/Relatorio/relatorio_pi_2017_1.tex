@@ -21,7 +21,7 @@
 \graphicspath{{./figs/}}
 
 % Title Page
-\title{ Relatório: Mormodo Verde }
+\title{ Relatório: Mormodo Verde \\}
 \author{Bruno Granato \\
 	Nicholas Quagliani\\
 	Renata Baptista\\
@@ -40,7 +40,7 @@
 \cleardoublepage
 \chapter{Introdução}
 	\section{Motivação}
-		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso e permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo verde, que é um sistema para o cuidado das plantas.
+		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso e permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo Verde, que é um sistema para o cuidado das plantas.
 	\section{Objetivo}
 		Este projeto tem por objetivo a construção de um sistema que regue e controle a quantidade de luz solar recebida por plantas, uma vez sabido a espécie da mesma.
 		
@@ -144,13 +144,13 @@
 			
 		
 		\subsection{Mecânica}
-			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
+			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides, Figura~\ref{fig:VALVULA}. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
 			
-			\begin{figure}[!htb]
+			\begin{figure}[!h]
 				\centering
-				\includegraphics{valvula}
+				\includegraphics[width=0.4\linewidth]{figs/valvula}
 				\caption{Válvula solenoide}
-				\label{Rotulo}
+				\label{fig:VALVULA}
 			\end{figure}
 		
 			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. 
