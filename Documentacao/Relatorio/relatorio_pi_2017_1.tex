@@ -21,7 +21,7 @@
 \graphicspath{{./figs/}}
 
 % Title Page
-\title{ Relatório: Mormodo Verde \\}
+\title{ Relatório: Mordomo Verde \\}
 \author{Bruno Granato \\
 	Nicholas Quagliani\\
 	Renata Baptista\\
@@ -52,7 +52,7 @@
 		
 		Assim, o microcontrolador agirá nos atuadores fazendo com que as necessidades das plantas sejam supridas. Neste projeto, o sistema será implementado para duas plantas diferentes.
 	\section{Organização do Documento}
-	    Este relatório é organizado da seguinte forma, no Capítulo~\ref{cap:Tecnologias} são apresentadas as tecnologias utilizadas no desenvolvimento do projeto. O Capítulo~\ref{cap:Implementacao} expõe o processo de implementação, as técnicas utilizadas e como problemas encontrados foram superados. Por fim, conclusões sobre o Projeto Integrado no Capítulo~\ref{cap:Conclusoes}.
+	    Este relatório é organizado da seguinte forma: no Capítulo~\ref{cap:Tecnologias} são apresentadas as tecnologias utilizadas no desenvolvimento do projeto; o Capítulo~\ref{cap:Implementacao} expõe o processo de implementação, as técnicas utilizadas e como problemas encontrados foram superados; por fim, conclusões sobre o Projeto Integrado no Capítulo~\ref{cap:Conclusoes}.
 
 \cleardoublepage
 \chapter{Tecnologias Utilizadas}
@@ -144,7 +144,7 @@
 			
 		
 		\subsection{Mecânica}
-			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides, como mostrado na Figura~\ref{fig:VALVULA}. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona uma relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
+			Para fazer o controle da água que cai sobre as plantas, foram utilizadas válvulas solenoides, como mostrado na Figura~\ref{fig:VALVULA}. São dispositivos que funcionam como torneiras controladas por um sinal elétrico. O momento correto para regar a planta é determinado pelo Arduino, baseado nos dados obtidos pelos sensores. Quando for necessário, o sistema aciona um relé que permite que a válvula receba o sinal elétrico que realizará sua abertura, fazendo as plantas serem molhadas.	
 			
 			\begin{figure}[!h]
 				\centering
@@ -154,7 +154,7 @@
 			\end{figure}
 		
 			O controle da luminosidade sobre as plantas é realizado através de um servo instalado no eixo de um sistema de persianas. Dependendo do dado obtido pelo LDR, o Arduino faz com que o servo gire mais ou menos, variando a inclinação das persianas e adequando a luminosidade à planta em questão. Os servos utilizados foram Micro Servo 9g SG90 TowerPro, Figura~\ref{fig:SERVO}. Foram utilizadas persianas comuns, compradas em uma loja de materiais de construção. Elas possuíam uma espécie de canaleta na parte superior, onde foi possível encaixar o servo para realizar o controle. Uma discussão maior sobre o encaixe entre o servo e a persiana é feita na Seção~\ref{sec:montagem}. \\
-			As persianas foram presas na parte superior da estrutura, de forma que cobrissem completamente a superfície por onde a luz poderia atingir a planta. Assim, a iluminação era dependia totalmente do grau de abertura das persianas, controlado pelo servo. 
+			As persianas foram presas na parte superior da estrutura, de forma que cobrissem completamente a superfície por onde a luz poderia atingir a planta. Assim, a iluminação dependia totalmente do grau de abertura das persianas, controlado pelo servo. 
 			
 				
 			\begin{figure}[!h]
@@ -165,7 +165,7 @@
 			\end{figure}
 		
 	\section{Projeto de Software}
-	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido a maneira que o Arduino faz essas leituras, foi necessário adicionar um \textit{delay} entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
+	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido à maneira que o Arduino faz essas leituras, foi necessário adicionar um \textit{delay} entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
 	
 	De posse dessas informações e da informação do tipo de planta que tem no \textit{slot}, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
 	
@@ -222,10 +222,10 @@
 	
 	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significado, então separá-lo do restante significou uma montagem mais confortável, em termos espaciais. 
 	
-	A comunicação entre os Arduinos foi feita pelas portas digitais, uma para cada estrutura. Ao digitar no teclado e escolher a planta Avenca para a primeira estrutura, o sistema envia pela primeira porta um sinal de nível lógico alto. Caso Renda for selecionada, um sinal de nível lógico baixo é enviado pela primeira porta. O mesmo para segunda estrutura, por meio da segunda porta digital um nível alto ou baixo é enviado, indicando qual planta fora escolhida. 
-	No Arduino MEGA, a recepção a leitura do sinal enviado é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, ou seja, Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
+	A comunicação entre os Arduinos foi feita pelas portas digitais, uma para cada estrutura. Ao digitar no teclado e escolher a planta Avenca para a primeira estrutura, o sistema envia pela primeira porta um sinal de nível lógico alto. Caso Renda for selecionada, um sinal de nível lógico baixo é enviado pela primeira porta. O mesmo vale para a segunda estrutura: por meio da segunda porta digital, um nível lógico alto ou baixo é enviado, indicando qual planta foi escolhida. 
+	No Arduino MEGA, a leitura do sinal enviado é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, o que indica que a Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
 	
-	A expansão é trivial, aumenta-se o número de portas digitais utilizadas, seguindo a mesma lógica.
+	A expansão é trivial, bastando aumentar o número de portas digitais utilizadas, seguindo a mesma lógica.
 
 \cleardoublepage
 \chapter{Conclusões}
