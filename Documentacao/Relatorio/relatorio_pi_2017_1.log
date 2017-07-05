@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  4 JUL 2017 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  4 JUL 2017 23:48
 entering extended mode
 **relatorio_pi_2017_1.tex
 (relatorio_pi_2017_1.tex
@@ -438,23 +438,16 @@ File: figs/renda.jpg Graphic file (type jpg)
  <use figs/renda.jpg>
 Package pdftex.def Info: figs/renda.jpg used on input line 67.
 (pdftex.def)             Requested size: 155.99762pt x 155.99806pt.
+ [4
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/avenca.jpg, id=22, 224.33812pt x 244.66406pt>
+ <./figs/renda.jpg>] <figs/avenca.jpg, id=26, 224.33812pt x 244.66406pt>
 File: figs/avenca.jpg Graphic file (type jpg)
- <use figs/avenca.jpg>
+
+<use figs/avenca.jpg>
 Package pdftex.def Info: figs/avenca.jpg used on input line 77.
 (pdftex.def)             Requested size: 155.99762pt x 170.13622pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4
-
-
-]
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
 
@@ -473,21 +466,24 @@ File: ./figs/LM35_config_basica.png Graphic file (type png)
 <use ./figs/LM35_config_basica.png>
 Package pdftex.def Info: ./figs/LM35_config_basica.png used on input line 91.
 (pdftex.def)             Requested size: 213.79822pt x 142.2812pt.
- [5 <./figs/renda.jpg> <./figs/avenca.jpg>]
-<figs/ARDUINO_MEGA_A03.png, id=32, 3011.25pt x 1518.67375pt>
+ [5 <./figs/avenca.jpg>]
+<figs/ARDUINO_MEGA_A03.png, id=33, 3011.25pt x 1518.67375pt>
 File: figs/ARDUINO_MEGA_A03.png Graphic file (type png)
 
 <use figs/ARDUINO_MEGA_A03.png>
 Package pdftex.def Info: figs/ARDUINO_MEGA_A03.png used on input line 118.
 (pdftex.def)             Requested size: 234.00238pt x 117.99724pt.
- [6 <./figs/LM35_config_basica.png>]
-<figs/ARDUINO_UNO_A06.png, id=39, 3011.25pt x 2118.91624pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/ARDUINO_UNO_A06.png, id=34, 3011.25pt x 2118.91624pt>
 File: figs/ARDUINO_UNO_A06.png Graphic file (type png)
 
 <use figs/ARDUINO_UNO_A06.png>
 Package pdftex.def Info: figs/ARDUINO_UNO_A06.png used on input line 127.
 (pdftex.def)             Requested size: 195.0pt x 137.18474pt.
-
+ [6 <./figs/LM35_config_basica.png>]
 <figs/lcd-keyboard.jpg, id=40, 556.32843pt x 409.53pt>
 File: figs/lcd-keyboard.jpg Graphic file (type jpg)
 
@@ -516,7 +512,7 @@ Cap\'{\i }tulo 3.
 <figs/estru0.jpg, id=54, 455.45157pt x 380.17032pt>
 File: figs/estru0.jpg Graphic file (type jpg)
  <use figs/estru0.jpg>
-Package pdftex.def Info: figs/estru0.jpg used on input line 185.
+Package pdftex.def Info: figs/estru0.jpg used on input line 187.
 (pdftex.def)             Requested size: 272.99881pt x 227.87772pt.
 
 [10
@@ -526,19 +522,19 @@ Package pdftex.def Info: figs/estru0.jpg used on input line 185.
 File: figs/estru1.jpg Graphic file (type jpg)
 
 <use figs/estru1.jpg>
-Package pdftex.def Info: figs/estru1.jpg used on input line 198.
+Package pdftex.def Info: figs/estru1.jpg used on input line 200.
 (pdftex.def)             Requested size: 390.0pt x 141.60321pt.
  <figs/estru2.jpg, id=59, 771.63281pt x 344.03531pt>
 File: figs/estru2.jpg Graphic file (type jpg)
 
 <use figs/estru2.jpg>
-Package pdftex.def Info: figs/estru2.jpg used on input line 205.
+Package pdftex.def Info: figs/estru2.jpg used on input line 207.
 (pdftex.def)             Requested size: 390.0pt x 173.88081pt.
  <figs/estru3.jpg, id=60, 252.945pt x 346.29375pt>
 File: figs/estru3.jpg Graphic file (type jpg)
 
 <use figs/estru3.jpg>
-Package pdftex.def Info: figs/estru3.jpg used on input line 212.
+Package pdftex.def Info: figs/estru3.jpg used on input line 214.
 (pdftex.def)             Requested size: 155.99762pt x 213.56912pt.
 
 
@@ -547,7 +543,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figs/estru4.jpg, id=61, 708.39656pt x 249.93375pt>
 File: figs/estru4.jpg Graphic file (type jpg)
  <use figs/estru4.jpg>
-Package pdftex.def Info: figs/estru4.jpg used on input line 219.
+Package pdftex.def Info: figs/estru4.jpg used on input line 221.
 (pdftex.def)             Requested size: 390.0pt x 137.60127pt.
 
 
@@ -569,14 +565,14 @@ Here is how much of TeX's memory you used:
  15857 multiletter control sequences out of 15000+200000
  9761 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,7n,54p,886b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,7n,54p,838b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/miktek/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb><C:/miktek/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/miktek/fonts/type1/
 public/amsfonts/cm/cmr12.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmr17.pf
 b><C:/miktek/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/miktek/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb><C:/miktek/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 
-Output written on relatorio_pi_2017_1.pdf (15 pages, 7708813 bytes).
+Output written on relatorio_pi_2017_1.pdf (15 pages, 7708972 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

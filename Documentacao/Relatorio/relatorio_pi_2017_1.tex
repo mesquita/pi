@@ -40,7 +40,7 @@
 \cleardoublepage
 \chapter{Introdução}
 	\section{Motivação}
-		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso e permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo Verde, que é um sistema para o cuidado das plantas.
+		Dado a correria imposta pelas atividades diárias e viagens ocasionais, é comum que as plantas domésticas fiquem neglicenciadas. Para evitar isso, permitir a hidratação e a quantidade de luminosidade necessárias, foi concebido o Mordomo Verde, que é um sistema para o cuidado das plantas.
 	\section{Objetivo}
 		Este projeto tem por objetivo a construção de um sistema que regue e controle a quantidade de luz solar recebida por plantas, uma vez conhecida a espécie da mesma.
 		
@@ -60,7 +60,7 @@
 	\section{Especificações}
 	
 	\subsection{Plantas}
-	Duas plantas de espécies diferentes foram utilizadas durante o desenvolvimento do projeto. A renda-portuguesa (\textit{Davallia fejeensis}), Figura~\ref{fig:renda}, é uma planta nativa da ilhas Fiji, que se desenvolve melhor em ambientes iluminados, porém sem sol direto, que pode ser cultivada no interior de apartamentos, no chão ou em local baixo, perto da janela. Uma vez que a renda-portuguesa também não deve ficar exposta ao vento, pois é frágil. Ela deve ser regada, em dias quentes, ou seja, temperaturas acima dos 30$\textdegree$~C, todos os dias; quando abaixo disso, de dois em dois dias. Mas sempre é recomendado verificar a umidade do solo, a fim de certificar-se que o mesmo se encontra devidamente úmido. Discussões sobre a quantificação desses valores serão feitas na seção %ref da seção \ref{sec:q}%.
+	Duas plantas de espécies diferentes foram utilizadas durante o desenvolvimento do projeto. A renda-portuguesa (\textit{Davallia fejeensis}), Figura~\ref{fig:renda}, é uma planta nativa da ilhas Fiji, que se desenvolve melhor em ambientes iluminados, porém sem sol direto, que pode ser cultivada no interior de apartamentos, no chão ou em local baixo, perto da janela. Uma vez que a renda-portuguesa também não deve ficar exposta ao vento, pois é frágil. Ela deve ser regada, em dias quentes, ou seja, temperaturas acima dos 30$\textdegree$~C, todos os dias; quando abaixo disso, de dois em dois dias. Mas sempre é recomendado verificar a umidade do solo, a fim de certificar-se que o mesmo se encontra devidamente úmido.
 		
 \begin{figure}[!h]
 	\centering
@@ -111,7 +111,7 @@
 		
 		\subsection{Plataforma Arduino - MEGA}	
 		 
-		O Arduino MEGA, representado na Figura~\ref{fig:MEGA}, é o coração do projeto: todos os sensores e atuadores foram conectados a ele e todo o processamento ocorreu por meio dele. Através das portas analógicas, os sinais dos sensores são recebidos e os dos atuadores enviados; pelas portas digitais, há a conexão com o Arduino UNO, apresentada posteriormente. O MEGA foi escolhido por apresentar uma grande quantidade de portas analógicas e digitais, tornando possível utilizar apenas um Arduino para todos os sensores e atuadores. 
+		O Arduino MEGA, representado na Figura~\ref{fig:MEGA}, é o coração do projeto: todos os sensores e atuadores foram conectados a ele, e todo o processamento ocorreu por meio dele. Através das portas analógicas os sinais dos sensores são recebidos e os dos atuadores enviados; pelas portas digitais, há a conexão com o Arduino UNO, apresentada posteriormente. O MEGA foi escolhido por apresentar uma grande quantidade de portas analógicas e digitais, tornando possível utilizar apenas um Arduino para todos os sensores e atuadores. 
 		
 		\begin{figure}[!h]
 			\centering
@@ -131,7 +131,7 @@
 		
 			Um Arduino UNO, Figura~\ref{fig:UNO} foi utilizado para a implementação de um menu, onde o usuário do sistema, por meio de um \textit{display} e botões, seleciona quais serão as plantas tratadas pelo sistema. A ideia é que para um sistema comercial, um banco de dados com um grande número de plantas esteja presente para o cliente. Assim, o produto se adaptaria a cada tipo de planta, que tem necessidades de água e de iluminação diferentes. 
 			
-			O \textit{display} utilizado é mostrado na Figura~\ref{fig:keyboard} e já conta com botões para fácil implementação de um menu, por exemplo.
+			O \textit{display} utilizado é mostrado na Figura~\ref{fig:keyboard} e já conta com botões para fácil implementação do menu.
 			
 		    Na seção~\ref{sec:comunicaoArduinos} discutiremos como foi implementado a comunicação entre os Arduinos. 	
 			\begin{figure}[!h]
@@ -168,6 +168,8 @@
 	Primeiro, era necessário colher os dados dos sensores, lendo suas respectivas entradas analógicas. Devido à maneira que o Arduino faz essas leituras, foi necessário adicionar um \textit{delay} entre as aquisições para que o microcontrolador tivesse tempo o suficiente para chavear as entradas analógicas com seu único conversor A/D.
 	
 	De posse dessas informações e da informação do tipo de planta que tem no \textit{slot}, foi possível controlar os atuadores para regar a planta e fornecer mais ou menos luminosidade.
+	
+	Todo o projeto de Software foi realizado na IDE do Arduino, disponibilizada online no site da plataforma.
 	
 
 \cleardoublepage
@@ -221,24 +223,24 @@
 	\label{fig:estru4}
 	\end{figure}
 	
-	O que a princípio parecia uma tarefa trivial, a conexão entre o servo e o eixo da persiana mostrou-se um desafio inesperado. Inicialmente, uma haste, que podia ser encaixada no servo, foi colada no eixo da persiana com cola especial para plástico. Desta forma, bastaria encaixar o servo no local correto para o sistema estar pronto para o uso. Porém, a superfície de contato entre as peças que foram coladas mostrou-se muito pequena, o que fez com que a cola soltasse por diversas vezes. Após várias tentativas, conseguiu-se fixar as duas peças utilizando cola Super Bonder.
+	O que a princípio parecia uma tarefa trivial, a conexão entre o servo e o eixo da persiana mostrou-se um desafio inesperado. Inicialmente, uma haste, que podia ser encaixada no servo, foi colada no eixo da persiana com cola especial para plástico. Desta forma, bastaria encaixar o servo no local correto para o sistema estar pronto para o uso. Porém, a superfície de contato entre as peças que foram coladas mostrou-se muito pequena, o que fez com que a cola soltasse por diversas vezes. Após várias tentativas, conseguiu-se fixar as duas peças utilizando cola Super Bonder. Certamente esta conexão foi a parte que mais apresentou problemas durante a confecção da estrutura e na hora dos testes.
 	
 	\cleardoublepage
 	\section{Interação com o Usuário}
 	\label{sec:comunicaoArduinos}
 	A interação com o usuário foi implementada por meio de um menu, utilizando o Arduino UNO e um \textit{display} com botões.
 	
-	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significado, então separá-lo do restante significou uma montagem mais confortável, em termos espaciais. 
+	O projeto do menu foi desenvolvido sobre um Arduino UNO, separado do restante, por uma questão de organização. O \textit{shield} do \textit{display} ocupa um espaço significativo, então separá-lo do restante resultou em uma montagem mais confortável, em termos espaciais. 
 	
 	A comunicação entre os Arduinos foi feita pelas portas digitais, uma para cada estrutura. Ao digitar no teclado e escolher a planta Avenca para a primeira estrutura, o sistema envia pela primeira porta um sinal de nível lógico alto. Caso Renda for selecionada, um sinal de nível lógico baixo é enviado pela primeira porta. O mesmo vale para a segunda estrutura: por meio da segunda porta digital, um nível lógico alto ou baixo é enviado, indicando qual planta foi escolhida. 
-	No Arduino MEGA, a leitura do sinal enviado é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, o que indica que a Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
+	No Arduino MEGA, a leitura do sinal recebido é realizada e o sistema alterna as configurações de cada estrutura de acordo com a planta escolhida. Por exemplo, ao receber o sinal de nível lógico alto, o que indica que a Avenca foi o tipo de planta selecionada para determinada estrutura, existem operadores condicionais no código que alteram o quanto a persiana gira para que as necessidades de luminosidade da Avenca sejam atendidas. 
 	
 	A expansão é trivial, bastando aumentar o número de portas digitais utilizadas, seguindo a mesma lógica.
 
 \cleardoublepage
 \chapter{Conclusões}
 	\label{cap:Conclusoes}
- 	Os desafios no desenvolvimento deste projeto foram muitos, a vida real apresenta dificuldades que a teoria não nos avisa que irão existir. Experimentando, nos deparamos com diversos obstáculos, que com muito empenho foram superados. A implementação com êxito das ideias propostas no começo do semestre são fruto de um trabalho em equipe exemplar por parte deste grupo, que apresenta muita sintonia e dedicação, ao colocar em prática os conhecimentos adquiridos durante o curso de engenharia eletrônica, e outros tantos, que ou foram aprendidos na vida ou quando as dificuldades surgiram no meio da construção do projeto. Portanto, mais que apenas uma disciplina obrigatória, o Projeto Integrado aperfeiçoa todo o espectro de habilidades indispensáveis de um engenheiro. 
+ 	Os desafios no desenvolvimento deste projeto foram muitos, a vida real apresenta dificuldades que a teoria não nos avisa que irão existir. Experimentando, nos deparamos com diversos obstáculos, que com muito empenho foram superados. A implementação com êxito das ideias propostas no começo do semestre são fruto de um trabalho em equipe exemplar por parte deste grupo, que apresentou muita sintonia e dedicação, ao colocar em prática os conhecimentos adquiridos durante o curso de engenharia eletrônica, e outros tantos, que ou foram aprendidos na vida ou quando as dificuldades surgiram no meio da construção do projeto. Portanto, mais que apenas uma disciplina obrigatória, o Projeto Integrado aperfeiçoa todo o espectro de habilidades indispensáveis de um engenheiro. 
  
  
  

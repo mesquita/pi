@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {2.2.3}Sensor de luminosidade LDR 5mm}{6}
 \contentsline {subsection}{\numberline {2.2.4}Plataforma Arduino - MEGA}{6}
 \contentsline {subsection}{\numberline {2.2.5}Plataforma Arduino - UNO}{7}
-\contentsline {subsection}{\numberline {2.2.6}Mec\IeC {\^a}nica}{8}
+\contentsline {subsection}{\numberline {2.2.6}Mec\IeC {\^a}nica}{7}
 \contentsline {section}{\numberline {2.3}Projeto de Software}{9}
 \contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o}{10}
 \contentsline {section}{\numberline {3.1}Montagem da Estrutura}{10}
